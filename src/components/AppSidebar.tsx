@@ -1,0 +1,111 @@
+import { Home, BookOpen, AlertTriangle, ClipboardList, Users } from "lucide-react";
+import { NavLink } from "react-router-dom";
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarMenuSub,
+  SidebarMenuSubItem,
+  SidebarMenuSubButton,
+  useSidebar,
+} from "@/components/ui/sidebar";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
+
+const navigationItems = [
+  { title: "דף הבית", url: "/", icon: Home },
+  { title: "עקרונות אתיים", url: "/principles", icon: BookOpen },
+  { title: "אתגרי AI", url: "/challenges", icon: AlertTriangle },
+  {
+    title: "שלבי המחקר",
+    icon: ClipboardList,
+    subItems: [
+      { title: "שלב 1: תכנון והגדרת מטרות", url: "/phases/planning" },
+      { title: "שלב 2: איסוף נתונים", url: "/phases/data-collection" },
+      { title: "שלב 3: ניתוח התוצאות", url: "/phases/analysis" },
+      { title: "שלב 4: הצגת ממצאים", url: "/phases/presentation" },
+    ],
+  },
+  { title: "אודות", url: "/about", icon: Users },
+];
+
+export function AppSidebar() {
+  const { state } = useSidebar();
+  const isCollapsed = state === "collapsed";
+
+  return (
+    <Sidebar dir="rtl" className="border-l border-sidebar-border">
+      <SidebarContent>
+        <SidebarGroup>
+          <SidebarGroupLabel className="text-sidebar-foreground font-semibold text-lg py-4">
+            {!isCollapsed && "UXR אתי עם AI"}
+          </SidebarGroupLabel>
+          <SidebarGroupContent>
+            <SidebarMenu>
+              {navigationItems.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                  {item.subItems ? (
+                    <Collapsible defaultOpen className="group/collapsible">
+                      <CollapsibleTrigger asChild>
+                        <SidebarMenuButton className="w-full">
+                          <item.icon className="ml-2 h-4 w-4" />
+                          {!isCollapsed && (
+                            <>
+                              <span>{item.title}</span>
+                              <ChevronDown className="mr-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                            </>
+                          )}
+                        </SidebarMenuButton>
+                      </CollapsibleTrigger>
+                      {!isCollapsed && (
+                        <CollapsibleContent>
+                          <SidebarMenuSub>
+                            {item.subItems.map((subItem) => (
+                              <SidebarMenuSubItem key={subItem.url}>
+                                <SidebarMenuSubButton asChild>
+                                  <NavLink
+                                    to={subItem.url}
+                                    className={({ isActive }) =>
+                                      isActive
+                                        ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium"
+                                        : "hover:bg-sidebar-accent/50"
+                                    }
+                                  >
+                                    <span>{subItem.title}</span>
+                                  </NavLink>
+                                </SidebarMenuSubButton>
+                              </SidebarMenuSubItem>
+                            ))}
+                          </SidebarMenuSub>
+                        </CollapsibleContent>
+                      )}
+                    </Collapsible>
+                  ) : (
+                    <SidebarMenuButton asChild>
+                      <NavLink
+                        to={item.url}
+                        className={({ isActive }) =>
+                          isActive
+                            ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium"
+                            : "hover:bg-sidebar-accent/50"
+                        }
+                      >
+                        <item.icon className="ml-2 h-4 w-4" />
+                        {!isCollapsed && <span>{item.title}</span>}
+                      </NavLink>
+                    </SidebarMenuButton>
+                  )}
+                </SidebarMenuItem>
+              ))}
+            </SidebarMenu>
+          </SidebarGroupContent>
+        </SidebarGroup>
+      </SidebarContent>
+    </Sidebar>
+  );
+}
