@@ -19,8 +19,8 @@ import { ChevronDown } from "lucide-react";
 
 const navigationItems = [
   { title: "דף הבית", url: "/", icon: Home },
-  { title: "עקרונות אתיים", url: "/principles", icon: BookOpen },
   { title: "אתגרי AI", url: "/challenges", icon: AlertTriangle },
+  { title: "עקרונות אתיים", url: "/principles", icon: BookOpen },
   {
     title: "שלבי המחקר",
     icon: ClipboardList,
