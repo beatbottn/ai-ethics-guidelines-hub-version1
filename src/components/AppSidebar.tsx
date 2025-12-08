@@ -42,9 +42,6 @@ export function AppSidebar() {
     <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-sidebar-foreground font-semibold text-lg py-4">
-            {!isCollapsed && "UXR אתי עם AI"}
-          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navigationItems.map((item) => (
