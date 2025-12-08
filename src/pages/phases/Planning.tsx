@@ -1,5 +1,6 @@
 import { Compass, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const Planning = () => {
@@ -73,8 +74,14 @@ const Planning = () => {
                   </ul>
                 </div>
                 <div className="space-y-2">
-                  <p className="font-semibold text-primary">עקרונות אתיים מהותיים:</p>
-                  <p className="text-foreground/90">עשיית טוב: תרומה לרווחה | אי-גרימת נזק: הימנעות מפגיעה</p>
+                  <p className="font-semibold text-primary mb-2">עקרונות אתיים מהותיים:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["עשיית טוב: תרומה לרווחה", "אי-גרימת נזק: הימנעות מפגיעה"].map((principle, idx) => (
+                      <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
+                        {principle}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
                 <div className="bg-muted/50 p-6 rounded-lg space-y-4">
                   <p className="font-semibold text-lg text-foreground">כיצד לפעול:</p>
@@ -117,8 +124,14 @@ const Planning = () => {
                   <p className="text-foreground/90">עיבוד מאמרים, דוחות, מסמכים או חומרים מוקלטים</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="font-semibold text-primary">עקרונות אתיים מהותיים:</p>
-                  <p className="text-foreground/90">אי-גרימת נזק: הימנעות מפגיעה | צדק: הגינות וחלוקה הוגנת של משאבים</p>
+                  <p className="font-semibold text-primary mb-2">עקרונות אתיים מהותיים:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {["אי-גרימת נזק: הימנעות מפגיעה", "צדק: הגינות וחלוקה הוגנת של משאבים"].map((principle, idx) => (
+                      <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
+                        {principle}
+                      </Badge>
+                    ))}
+                  </div>
                 </div>
                 <div className="bg-muted/50 p-6 rounded-lg space-y-4">
                   <p className="font-semibold text-lg text-foreground">כיצד לפעול:</p>
