@@ -24,10 +24,10 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <SidebarProvider>
-          <div className="flex min-h-screen w-full">
+          <div className="flex min-h-screen w-full" dir="rtl">
             <AppSidebar />
             <main className="flex-1">
-              <header className="sticky top-0 z-10 flex h-14 items-center border-b bg-background/95 backdrop-blur px-4">
+              <header className="sticky top-0 z-10 flex h-14 items-center justify-end border-b bg-background/95 backdrop-blur px-4">
                 <SidebarTrigger />
               </header>
               <Routes>

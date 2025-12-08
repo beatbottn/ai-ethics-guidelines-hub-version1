@@ -39,7 +39,7 @@ export function AppSidebar() {
   const isCollapsed = state === "collapsed";
 
   return (
-    <Sidebar dir="rtl" className="border-l border-sidebar-border">
+    <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel className="text-sidebar-foreground font-semibold text-lg py-4">
