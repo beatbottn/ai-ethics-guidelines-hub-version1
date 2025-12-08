@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 
 const Presentation = () => {
   const tasks = [
@@ -79,7 +80,13 @@ const Presentation = () => {
                     {/* Principles */}
                     <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
                       <h3 className="text-lg font-bold text-foreground mb-3">עקרונות אתיים מהותיים</h3>
-                      <p className="text-foreground/90 leading-relaxed">{task.principles}</p>
+                      <div className="flex flex-wrap gap-2">
+                        {task.principles.split(", ").map((principle, idx) => (
+                          <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
+                            {principle}
+                          </Badge>
+                        ))}
+                      </div>
                     </div>
 
                     {/* How to Act */}
