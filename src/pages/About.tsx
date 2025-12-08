@@ -101,13 +101,6 @@ const About = () => {
           </p>
         </div>
 
-        {/* Contact Section */}
-        <div className="card-elevated p-8 space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">יצירת קשר ועדכונים</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            לשאלות, הערות או הצעות לשיפור המדריך, ניתן ליצור קשר עם היוצרות דרך פרופילי הלינקדאין שלהן.
-          </p>
-        </div>
       </div>
     </div>
   );
