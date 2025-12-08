@@ -87,7 +87,7 @@ export function AppSidebar() {
                       <NavLink
                         to={item.url}
                         className={({ isActive }) =>
-                          `flex items-center w-full ${isActive
+                          `flex items-center w-full transition-colors focus:outline-none focus:ring-2 focus:ring-sidebar-ring focus:ring-offset-1 rounded-md ${isActive
                             ? "bg-sidebar-primary text-sidebar-primary-foreground font-medium"
                             : "hover:bg-sidebar-accent/50"
                           }`
