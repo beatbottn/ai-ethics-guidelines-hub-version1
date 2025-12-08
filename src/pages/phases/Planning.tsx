@@ -73,8 +73,8 @@ const Planning = () => {
                     <li>יצירת פרסונות ראשוניות (Proto-Personas)</li>
                   </ul>
                 </div>
-                <div className="space-y-2">
-                  <p className="font-semibold text-primary mb-2">עקרונות אתיים מהותיים:</p>
+                <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
+                  <h3 className="text-lg font-bold text-foreground mb-3">עקרונות אתיים מהותיים</h3>
                   <div className="flex flex-wrap gap-2">
                     {["עשיית טוב: תרומה לרווחה", "אי-גרימת נזק: הימנעות מפגיעה"].map((principle, idx) => (
                       <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
@@ -123,8 +123,8 @@ const Planning = () => {
                   <p className="font-semibold text-foreground">תת-משימות:</p>
                   <p className="text-foreground/90">עיבוד מאמרים, דוחות, מסמכים או חומרים מוקלטים</p>
                 </div>
-                <div className="space-y-2">
-                  <p className="font-semibold text-primary mb-2">עקרונות אתיים מהותיים:</p>
+                <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
+                  <h3 className="text-lg font-bold text-foreground mb-3">עקרונות אתיים מהותיים</h3>
                   <div className="flex flex-wrap gap-2">
                     {["אי-גרימת נזק: הימנעות מפגיעה", "צדק: הגינות וחלוקה הוגנת של משאבים"].map((principle, idx) => (
                       <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
