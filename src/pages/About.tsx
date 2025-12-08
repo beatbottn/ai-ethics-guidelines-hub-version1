@@ -13,6 +13,35 @@ const About = () => {
           </p>
         </div>
 
+        {/* Methodology Section */}
+        <div className="card-elevated p-8 space-y-6">
+          <h2 className="text-3xl font-bold text-foreground">מתודולוגיה ומקורות</h2>
+          <div className="prose prose-lg max-w-none text-foreground/90 space-y-4">
+            <p className="text-lg leading-relaxed">
+              המדריך מבוסס על עקרונות שגובשו מסקירה רוחבית וניתוח דוחות והנחיות ממארגונים אקדמיים,
+              גופי מחקר וחברות טכנולוגיה.
+            </p>
+            <p className="text-lg leading-relaxed">
+              בהמלצות בחרנו להתמקד בהנחיות מעשיות לממשקי צ'ט בהם נעשה רוב השימוש היומיומי במשימות
+              בתהליך המחקר - בשל ריבוי הכלים והממשקים בהם ניתן להשתמש ביכולות של בינה מלאכותית.
+            </p>
+            <p className="text-lg leading-relaxed">
+              העקרונות האתיים מבוססים על מסגרות אתיות מוכרות כמו דו"ח בלמונט (Belmont Report)
+              ועקרונות אתיים מוכרים בתחום המחקר המדעי והרפואי, המותאמים לתחום מחקר המשתמשים.
+            </p>
+          </div>
+        </div>
+
+        {/* Purpose Section */}
+        <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-6">
+          <h2 className="text-3xl font-bold text-foreground">מטרת המדריך</h2>
+          <p className="text-lg text-foreground/90 leading-relaxed">
+            מדריך זה נועד לספק כלים מעשיים לחוקרות וחוקרי משתמשים, מעצבות ומעצבי UX ומנהלות ומנהלי
+            צוותים לשימוש אתי ואחראי בכלי AI בכל שלבי המחקר. המדריך מדגיש את החשיבות של שמירה על
+            המצפן האתי תוך כדי ניצול היתרונות שמציעה הטכנולוגיה.
+          </p>
+        </div>
+
         {/* Authors Section */}
         <div className="card-elevated p-8 space-y-8">
           <div>
@@ -71,36 +100,6 @@ const About = () => {
             </div>
           </div>
         </div>
-
-        {/* Methodology Section */}
-        <div className="card-elevated p-8 space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">מתודולוגיה ומקורות</h2>
-          <div className="prose prose-lg max-w-none text-foreground/90 space-y-4">
-            <p className="text-lg leading-relaxed">
-              המדריך מבוסס על עקרונות שגובשו מסקירה רוחבית וניתוח דוחות והנחיות ממארגונים אקדמיים,
-              גופי מחקר וחברות טכנולוגיה.
-            </p>
-            <p className="text-lg leading-relaxed">
-              בהמלצות בחרנו להתמקד בהנחיות מעשיות לממשקי צ'ט בהם נעשה רוב השימוש היומיומי במשימות
-              בתהליך המחקר - בשל ריבוי הכלים והממשקים בהם ניתן להשתמש ביכולות של בינה מלאכותית.
-            </p>
-            <p className="text-lg leading-relaxed">
-              העקרונות האתיים מבוססים על מסגרות אתיות מוכרות כמו דו"ח בלמונט (Belmont Report)
-              ועקרונות אתיים מוכרים בתחום המחקר המדעי והרפואי, המותאמים לתחום מחקר המשתמשים.
-            </p>
-          </div>
-        </div>
-
-        {/* Purpose Section */}
-        <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">מטרת המדריך</h2>
-          <p className="text-lg text-foreground/90 leading-relaxed">
-            מדריך זה נועד לספק כלים מעשיים לחוקרות וחוקרי משתמשים, מעצבות ומעצבי UX ומנהלות ומנהלי
-            צוותים לשימוש אתי ואחראי בכלי AI בכל שלבי המחקר. המדריך מדגיש את החשיבות של שמירה על
-            המצפן האתי תוך כדי ניצול היתרונות שמציעה הטכנולוגיה.
-          </p>
-        </div>
-
       </div>
     </div>
   );
