@@ -26,7 +26,7 @@ const Planning = () => {
         </div>
 
         {/* Key Recommendation */}
-        <div className="card-elevated p-8 border-r-4 border-r-primary bg-gradient-to-l from-primary/5 to-transparent">
+        <div className="card-elevated p-8">
           <h2 className="text-3xl font-bold text-foreground mb-4">המלצה רוחבית</h2>
           <p className="text-lg text-foreground/90 leading-relaxed">
             <strong>שלב תכנון המחקר הוא השלב הקריטי ביותר להטמעת עקרונות אתיים</strong>, שכן הוא קובע את
@@ -37,7 +37,7 @@ const Planning = () => {
 
         {/* Tasks Section */}
         <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">משימות נפוצות עם AI בשלב התכנון</h2>
+          <h2 className="text-3xl font-bold text-primary">משימות נפוצות עם AI בשלב התכנון</h2>
 
           {/* Task 1 */}
           <div className="card-elevated overflow-hidden">

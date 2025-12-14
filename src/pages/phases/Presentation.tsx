@@ -61,6 +61,7 @@ const Presentation = () => {
 
         {/* Tasks */}
         <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-primary">משימות נפוצות עם AI בשלב ההצגה</h2>
           {tasks.map((task) => (
             <div key={task.id} className="card-elevated">
               <Accordion type="single" collapsible>
