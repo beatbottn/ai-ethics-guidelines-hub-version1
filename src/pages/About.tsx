@@ -52,7 +52,7 @@ const About = () => {
           {/* Author 1 - Sivana */}
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <img
-              src="/images/sivana.png"
+              src="/images/sivana-enhanced.png"
               alt="סיונה שרלג"
               className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shrink-0 shadow-lg"
             />
@@ -78,7 +78,7 @@ const About = () => {
           {/* Author 2 - Naama */}
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <img
-              src="/images/naama.jpg"
+              src="/images/naama-enhanced.png"
               alt="נעמה שפירא"
               className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shrink-0 shadow-lg"
             />
