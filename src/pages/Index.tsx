@@ -63,7 +63,7 @@ const Index = () => {
                 ארבעה עקרונות יסוד אוניברסליים: אוטונומיה, אי-גרימת נזק, עשיית טוב וצדק
               </p>
               <div className="mt-4 flex items-center text-primary font-medium group-hover:gap-2 transition-all">
-                <span>למד עוד</span>
+                <span>קראו עוד</span>
                 <ArrowLeft className="h-4 w-4" />
               </div>
             </div>
@@ -83,7 +83,7 @@ const Index = () => {
                 השיפוט האנושי
               </p>
               <div className="mt-4 flex items-center text-destructive font-medium group-hover:gap-2 transition-all">
-                <span>למד עוד</span>
+                <span>קראו עוד</span>
                 <ArrowLeft className="h-4 w-4" />
               </div>
             </div>
@@ -102,7 +102,7 @@ const Index = () => {
                 המלצות מפורטות לארבעה שלבים: תכנון, איסוף נתונים, ניתוח והצגת ממצאים
               </p>
               <div className="mt-4 flex items-center text-accent font-medium group-hover:gap-2 transition-all">
-                <span>התחל כאן</span>
+                <span>התחילו כאן</span>
                 <ArrowLeft className="h-4 w-4" />
               </div>
             </div>
@@ -128,7 +128,7 @@ const Index = () => {
           <div className="mt-6">
             <Link to="/principles">
               <Button size="lg" className="bg-primary hover:bg-primary-dark">
-                קרא על העקרונות המלאים
+                קראו על העקרונות המלאים
                 <ArrowLeft className="mr-2 h-4 w-4" />
               </Button>
             </Link>
