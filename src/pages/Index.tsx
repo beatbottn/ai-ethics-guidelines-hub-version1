@@ -8,12 +8,9 @@ const Index = () => {
       {/* Hero Section */}
       <section className="py-16 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="text-center space-y-6">
-          <h1 className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-l from-primary-dark to-primary-light">
-            UXR אתי עם AI 💫
-          </h1>
-          <p className="text-2xl md:text-3xl text-foreground/90 font-medium max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl text-foreground font-bold max-w-4xl mx-auto">
             עקרונות אתיים לשימוש ב-AI בביצוע מחקר משתמשים
-          </p>
+          </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             מדריך מקוצר לחוקרות/חוקרי משתמשים, מעצבות/מעצבי UX ומנהלות/מנהלי צוותים
           </p>
