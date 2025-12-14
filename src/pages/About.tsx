@@ -1,5 +1,7 @@
 import { Linkedin, BookOpen, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import sivanaImage from "@/assets/sivana.png";
+import naamaImage from "@/assets/naama.jpg";
 
 const About = () => {
   return (
@@ -44,49 +46,60 @@ const About = () => {
 
         {/* Authors Section */}
         <div className="card-elevated p-8 space-y-8">
-          <div>
-            <h2 className="text-3xl font-bold text-foreground mb-6 flex items-center gap-3">
-              <BookOpen className="h-8 w-8 text-primary" />
-              יוצרות המדריך
-            </h2>
-            <div className="space-y-6">
-              {/* Author 1 */}
-              <div className="space-y-3">
-                <h3 className="text-2xl font-semibold text-foreground">סיונה שרלג</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  חוקרת משתמשים ומעצבת חוויית משתמש עם ניסיון רב שנים בתחום. מתמחה במחקר משתמשים
-                  מתודולוגי ובאינטגרציה של טכנולוגיות חדשניות בתהליכי המחקר.
-                </p>
-                <Button variant="outline" className="gap-2" asChild>
-                  <a
-                    href="https://www.linkedin.com/in/sivona-sharlag"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                    LinkedIn Profile
-                  </a>
-                </Button>
-              </div>
+          <h2 className="text-3xl font-bold text-foreground flex items-center gap-3">
+            <BookOpen className="h-8 w-8 text-primary" />
+            יוצרות המדריך
+          </h2>
 
-              {/* Author 2 */}
-              <div className="space-y-3">
-                <h3 className="text-2xl font-semibold text-foreground">נעמה שפירא</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  מומחית בתחום מחקר משתמשים ועיצוב חוויית משתמש. תורמת להתפתחות מקצועית של קהילת ה-UX
-                  בישראל ומובילה יוזמות לקידום עבודה אתית ואחראית בתחום.
-                </p>
-                <Button variant="outline" className="gap-2" asChild>
-                  <a
-                    href="https://www.linkedin.com/in/naama-shapira"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Linkedin className="h-4 w-4" />
-                    LinkedIn Profile
-                  </a>
-                </Button>
-              </div>
+          {/* Author 1 - Sivana */}
+          <div className="flex flex-col md:flex-row gap-6 items-start">
+            <img
+              src={sivanaImage}
+              alt="סיונה שרלג"
+              className="w-32 h-32 rounded-full object-cover shrink-0"
+            />
+            <div className="space-y-3">
+              <h3 className="text-2xl font-semibold text-foreground">סיונה שרלג</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                חוקרת משתמשים ומעצבת חוויית משתמש עם ניסיון רב שנים בתחום. מתמחה במחקר משתמשים
+                מתודולוגי ובאינטגרציה של טכנולוגיות חדשניות בתהליכי המחקר.
+              </p>
+              <Button variant="outline" className="gap-2" asChild>
+                <a
+                  href="https://www.linkedin.com/in/sivana/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn Profile
+                </a>
+              </Button>
+            </div>
+          </div>
+
+          {/* Author 2 - Naama */}
+          <div className="flex flex-col md:flex-row gap-6 items-start">
+            <img
+              src={naamaImage}
+              alt="נעמה שפירא"
+              className="w-32 h-32 rounded-full object-cover shrink-0"
+            />
+            <div className="space-y-3">
+              <h3 className="text-2xl font-semibold text-foreground">נעמה שפירא</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                מומחית בתחום מחקר משתמשים ועיצוב חוויית משתמש. תורמת להתפתחות מקצועית של קהילת ה-UX
+                בישראל ומובילה יוזמות לקידום עבודה אתית ואחראית בתחום.
+              </p>
+              <Button variant="outline" className="gap-2" asChild>
+                <a
+                  href="https://www.linkedin.com/in/nshapi/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn Profile
+                </a>
+              </Button>
             </div>
           </div>
 
