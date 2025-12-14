@@ -1,7 +1,6 @@
-import { Compass, ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
 const Planning = () => {
   const [expandedTask, setExpandedTask] = useState<string | null>(null);
@@ -14,17 +13,9 @@ const Planning = () => {
     <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
-        <div className="space-y-6">
-          <div className="flex items-center gap-4">
-            <div className="p-4 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 text-white">
-              <Compass className="h-10 w-10" />
-            </div>
-            <div>
-              <h1 className="text-5xl font-bold text-foreground">🧭 שלב 1: תכנון והגדרת מטרות</h1>
-              <p className="text-2xl text-primary font-medium mt-2">Planning & Research Definition</p>
-            </div>
-          </div>
-          <div className="card-elevated p-8 bg-primary/5">
+        <div className="space-y-4">
+          <h1 className="text-5xl font-bold text-foreground">🧭 שלב 1: תכנון והגדרת מטרות</h1>
+          <div className="card-elevated p-8">
             <p className="text-xl text-foreground/90 leading-relaxed">
               בשלב זה אנחנו מגדירים את מטרות המחקר, מנסחים שאלות מחקר, בוחרים את השיטות המתאימות,
               מגדירים את קהל היעד, ומתכננים את כל התהליך. זהו השלב הקריטי שקובע את יסודות המחקר
