@@ -1,7 +1,5 @@
 import { Linkedin, BookOpen, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import sivanaImage from "@/assets/sivana.png";
-import naamaImage from "@/assets/naama.jpg";
 
 const About = () => {
   return (
@@ -54,10 +52,9 @@ const About = () => {
           {/* Author 1 - Sivana */}
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <img
-              src={sivanaImage}
+              src="/images/sivana.png"
               alt="סיונה שרלג"
               className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shrink-0 shadow-lg"
-              style={{ imageRendering: 'auto' }}
             />
             <div className="space-y-3">
               <h3 className="text-2xl font-semibold text-foreground">סיונה שרלג</h3>
@@ -81,10 +78,9 @@ const About = () => {
           {/* Author 2 - Naama */}
           <div className="flex flex-col md:flex-row gap-8 items-start">
             <img
-              src={naamaImage}
+              src="/images/naama.jpg"
               alt="נעמה שפירא"
               className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover shrink-0 shadow-lg"
-              style={{ imageRendering: 'auto' }}
             />
             <div className="space-y-3">
               <h3 className="text-2xl font-semibold text-foreground">נעמה שפירא</h3>
