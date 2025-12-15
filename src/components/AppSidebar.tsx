@@ -1,5 +1,5 @@
 import { Home, BookOpen, AlertTriangle, ClipboardList, Users } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -37,6 +37,7 @@ const navigationItems = [
 export function AppSidebar() {
   const { state } = useSidebar();
   const isCollapsed = state === "collapsed";
+  const location = useLocation();
 
   return (
     <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border">
@@ -62,23 +63,22 @@ export function AppSidebar() {
                       {!isCollapsed && (
                         <CollapsibleContent>
                           <SidebarMenuSub>
-                            {item.subItems.map((subItem) => (
-                              <SidebarMenuSubItem key={subItem.url}>
-                                <SidebarMenuSubButton asChild>
-                                  <NavLink
-                                    to={subItem.url}
-                                    className={({ isActive }) =>
-                                      `flex items-center w-full transition-colors rounded-md ${isActive
-                                        ? "bg-sidebar-primary text-sidebar-primary-foreground font-medium"
-                                        : "hover:bg-sidebar-accent/50"
-                                      }`
-                                    }
+                            {item.subItems.map((subItem) => {
+                              const isActive = location.pathname === subItem.url;
+                              return (
+                                <SidebarMenuSubItem key={subItem.url}>
+                                  <SidebarMenuSubButton 
+                                    asChild 
+                                    isActive={isActive}
+                                    className={isActive ? "!bg-sidebar-primary !text-sidebar-primary-foreground font-medium" : ""}
                                   >
-                                    <span>{subItem.title}</span>
-                                  </NavLink>
-                                </SidebarMenuSubButton>
-                              </SidebarMenuSubItem>
-                            ))}
+                                    <NavLink to={subItem.url}>
+                                      <span>{subItem.title}</span>
+                                    </NavLink>
+                                  </SidebarMenuSubButton>
+                                </SidebarMenuSubItem>
+                              );
+                            })}
                           </SidebarMenuSub>
                         </CollapsibleContent>
                       )}
