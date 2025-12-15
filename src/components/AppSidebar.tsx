@@ -62,15 +62,14 @@ export function AppSidebar() {
                       </CollapsibleTrigger>
                       {!isCollapsed && (
                         <CollapsibleContent>
-                          <SidebarMenuSub>
+                          <SidebarMenuSub className="border-r-0 mr-0 pr-0">
                             {item.subItems.map((subItem) => {
                               const isActive = location.pathname === subItem.url;
                               return (
                                 <SidebarMenuSubItem key={subItem.url}>
                                   <SidebarMenuSubButton 
                                     asChild 
-                                    isActive={isActive}
-                                    className={isActive ? "!bg-sidebar-primary !text-sidebar-primary-foreground font-medium" : ""}
+                                    className={`w-full !bg-transparent hover:!bg-sidebar-accent/50 ${isActive ? "!text-primary font-medium" : ""}`}
                                   >
                                     <NavLink to={subItem.url}>
                                       <span>{subItem.title}</span>
