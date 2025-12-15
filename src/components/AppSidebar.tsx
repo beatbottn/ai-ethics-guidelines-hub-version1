@@ -69,7 +69,7 @@ export function AppSidebar() {
                                 <SidebarMenuSubItem key={subItem.url}>
                                   <SidebarMenuSubButton 
                                     asChild 
-                                    className={`w-full !bg-transparent hover:!bg-sidebar-accent/50 ${isActive ? "!text-primary font-medium" : ""}`}
+                                    className={`w-full !bg-transparent hover:!bg-sidebar-accent/50 ${isActive ? "!ring-1 !ring-sidebar-ring font-medium" : ""}`}
                                   >
                                     <NavLink to={subItem.url}>
                                       <span>{subItem.title}</span>
