@@ -68,9 +68,10 @@ export function AppSidebar() {
                                   <NavLink
                                     to={subItem.url}
                                     className={({ isActive }) =>
-                                      isActive
-                                        ? "bg-sidebar-accent text-sidebar-accent-foreground font-medium"
+                                      `flex items-center w-full transition-colors rounded-md ${isActive
+                                        ? "bg-sidebar-primary text-sidebar-primary-foreground font-medium"
                                         : "hover:bg-sidebar-accent/50"
+                                      }`
                                     }
                                   >
                                     <span>{subItem.title}</span>
