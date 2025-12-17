@@ -1,4 +1,4 @@
-import { AlertTriangle, TrendingDown, Database, Lock, Brain } from "lucide-react";
+import { AlertTriangle, TrendingDown, Database, Lock, Brain, ShieldAlert } from "lucide-react";
 
 const challenges = [
   {
@@ -50,6 +50,16 @@ const challenges = [
       'הסתמכות יתרה על AI עלולה לשחוק מיומנויות מחקר קריטיות, לפגוע בעומק ההבנה ובניואנסים שעוזרים להבין את התוכן. במחקר, זה עלול לגרום ליצירת תוכן גנרי ולהגביר "שחיקת המידע" כאשר AI מתבסס על תוכן שנוצר בעצמו.',
     color: "from-indigo-500 to-indigo-600",
     bgColor: "bg-indigo-50 dark:bg-indigo-950/20",
+  },
+  {
+    id: "security",
+    icon: ShieldAlert,
+    title: "סיכוני אבטחה ובטיחות",
+    titleEn: "Security & Safety Risks",
+    description:
+      "שימוש בכלי AI מעלה סיכוני אבטחה משמעותיים, כולל דליפות מידע רגיש, פרצות אבטחה בשירותי ענן, וחשיפה לא מכוונת של נתוני מחקר. במחקר משתמשים, מידע אישי ורגיש עלול להיחשף לספקי שירות צד שלישי או לשמש לאימון מודלים ללא הסכמה. יש לנקוט באמצעי זהירות כגון הצפנה, אנונימיזציה ובחירת כלים עם מדיניות פרטיות ברורה.",
+    color: "from-teal-500 to-teal-600",
+    bgColor: "bg-teal-50 dark:bg-teal-950/20",
   },
 ];
 
