@@ -1,20 +1,15 @@
 import { Link } from "react-router-dom";
 import { BookOpen, AlertTriangle, ClipboardList, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
+  return <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
       {/* Hero Section */}
       <section className="py-16 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="text-center space-y-6">
           <h1 className="text-4xl md:text-5xl text-foreground font-bold max-w-4xl mx-auto">
             עקרונות אתיים לשימוש ב-AI בביצוע מחקר משתמשים
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            מדריך מקוצר לאנשי ונשות מקצוע בתחומים: מחקר משתמשים, עיצוב UX, ותחומים המשתמשים בפרקטיקות דומות (שיווק,
-            מכירות, חווית לקוח ועוד) צוותים
-          </p>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">מדריך מקוצר לאנשי ונשות UX: מחקר משתמשים, עיצוב, ניהול מוצר, ותחומים המשתמשים בפרקטיקות מחקר דומות (חווית לקוח, שיווק, מכירות, ועוד)</p>
           <div className="pt-4 text-sm text-muted-foreground">
             נכתב על ידי: <span className="font-semibold">סיונה שרלג</span> בשיתוף עם{" "}
             <span className="font-semibold">נעמה שפירא</span> | ספטמבר 2025
@@ -28,17 +23,18 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-foreground">מבוא</h2>
           <div className="prose prose-lg max-w-none text-foreground/90 leading-relaxed space-y-4">
             <p>
-              בעידן הדיגיטלי המתפתח, כלי הבינה המלאכותית (AI) הופכים לחלק בלתי נפרד מעבודת חוקרי המשתמשים. AI מציע
-              יכולות חדשות לייעול המחקר והעמקת התובנות - מ-ChatGPT לניתוח ראיונות ועד לכלים מתקדמים לויזואליזציה של
-              נתונים.
+              בעידן הדיגיטלי המתפתח, כלי הבינה המלאכותית (AI) הופכים לחלק בלתי נפרד מעבודת חוקרי
+              המשתמשים. AI מציע יכולות חדשות לייעול המחקר והעמקת התובנות - מ-ChatGPT לניתוח ראיונות ועד
+              לכלים מתקדמים לויזואליזציה של נתונים.
             </p>
             <p>
-              עם זאת, השימוש בטכנולוגיות אלו מעלה שאלות אתיות חשובות: כיצד נוודא שהמחקר שלנו נשאר מהימן ואובייקטיבי? איך
-              נמנע מהטיות שעלולות להשפיע על תוצרי המחקר? כיצד נגן על פרטיות משתתפי המחקר והארגון שמטעמו מבוצע המחקר?
+              עם זאת, השימוש בטכנולוגיות אלו מעלה שאלות אתיות חשובות: כיצד נוודא שהמחקר שלנו נשאר
+              מהימן ואובייקטיבי? איך נמנע מהטיות שעלולות להשפיע על תוצרי המחקר? כיצד נגן על פרטיות
+              משתתפי המחקר והארגון שמטעמו מבוצע המחקר?
             </p>
             <p>
-              מדריך זה נועד לספק כלים מעשיים לחוקרות וחוקרי משתמשים, מעצבות ומעצבי UX ומנהלות ומנהלי צוותים לשימוש אתי
-              ואחראי בכלי AI בכל שלבי המחקר.
+              מדריך זה נועד לספק כלים מעשיים לחוקרות וחוקרי משתמשים, מעצבות ומעצבי UX ומנהלות ומנהלי
+              צוותים לשימוש אתי ואחראי בכלי AI בכל שלבי המחקר.
             </p>
           </div>
         </div>
@@ -76,7 +72,8 @@ const Index = () => {
                 <h3 className="text-xl font-semibold">אתגרי AI</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed flex-grow">
-                חמישה אתגרים מרכזיים: הטיה אלגוריתמית, הזיות, כשל במקור נתונים, חוסר שקיפות והחלשת השיפוט האנושי
+                חמישה אתגרים מרכזיים: הטיה אלגוריתמית, הזיות, כשל במקור נתונים, חוסר שקיפות והחלשת
+                השיפוט האנושי
               </p>
               <div className="mt-4 flex items-center text-destructive font-medium group-hover:gap-2 transition-all">
                 <span>קראו עוד</span>
@@ -112,13 +109,13 @@ const Index = () => {
           <h2 className="text-2xl font-bold text-foreground mb-4">עקרונות המנחים את השימוש ב-AI במחקר</h2>
           <div className="space-y-4 text-foreground/90 leading-relaxed">
             <p>
-              <strong>שימוש ב-AI</strong> במחקר משתמשים בא להעצים את עבודת החוקר.ת ידי שחרורו מהמשימות שגרתיות וחוזרות,
-              ובכך מאפשרים התמקדות בהסקת תובנות ובחשיבה אנושית.
+              <strong>שימוש ב-AI</strong> במחקר משתמשים בא להעצים את עבודת החוקר.ת ידי שחרורו מהמשימות
+              שגרתיות וחוזרות, ובכך מאפשרים התמקדות בהסקת תובנות ובחשיבה אנושית.
             </p>
             <p>
-              <strong>AI משמש ככלי משלים</strong> ולא כמחליף לעבודת החוקר.ת. כדי לפעול מהמצפן המוסרי שלנו, ולשמירה על
-              עקרונות האתיקה - אוטונומיה, אי גרימת פגיעה, עשיית טוב וצדק - עלינו להבטיח שהשימוש ב-AI נשאר כלי עזר ותמיכה
-              בלבד.
+              <strong>AI משמש ככלי משלים</strong> ולא כמחליף לעבודת החוקר.ת. כדי לפעול מהמצפן המוסרי שלנו,
+              ולשמירה על עקרונות האתיקה - אוטונומיה, אי גרימת פגיעה, עשיית טוב וצדק - עלינו להבטיח
+              שהשימוש ב-AI נשאר כלי עזר ותמיכה בלבד.
             </p>
           </div>
           <div className="mt-6">
@@ -131,8 +128,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
