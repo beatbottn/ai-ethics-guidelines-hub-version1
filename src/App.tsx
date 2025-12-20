@@ -12,6 +12,7 @@ import Planning from "./pages/phases/Planning";
 import DataCollection from "./pages/phases/DataCollection";
 import Analysis from "./pages/phases/Analysis";
 import Presentation from "./pages/phases/Presentation";
+import ResearchPhases from "./pages/ResearchPhases";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 
@@ -34,6 +35,7 @@ const App = () => (
                 <Route path="/" element={<Index />} />
                 <Route path="/principles" element={<Principles />} />
                 <Route path="/challenges" element={<Challenges />} />
+                <Route path="/phases" element={<ResearchPhases />} />
                 <Route path="/phases/planning" element={<Planning />} />
                 <Route path="/phases/data-collection" element={<DataCollection />} />
                 <Route path="/phases/analysis" element={<Analysis />} />

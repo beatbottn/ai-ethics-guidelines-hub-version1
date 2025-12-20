@@ -23,6 +23,7 @@ const navigationItems = [
   { title: "עקרונות אתיים", url: "/principles", icon: BookOpen },
   {
     title: "שלבי המחקר",
+    url: "/phases",
     icon: ClipboardList,
     subItems: [
       { title: "שלב 1: תכנון והגדרת מטרות", url: "/phases/planning" },
@@ -49,17 +50,29 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.title}>
                   {item.subItems ? (
                     <Collapsible defaultOpen className="group/collapsible">
-                      <CollapsibleTrigger asChild>
-                        <SidebarMenuButton className="w-full">
-                          <item.icon className="ml-2 h-4 w-4" />
-                          {!isCollapsed && (
-                            <>
-                              <span>{item.title}</span>
-                              <ChevronDown className="mr-auto transition-transform group-data-[state=open]/collapsible:rotate-180" />
-                            </>
-                          )}
+                      <div className="flex items-center">
+                        <SidebarMenuButton asChild className="flex-1">
+                          <NavLink
+                            to={item.url}
+                            className={({ isActive }) =>
+                              `flex items-center w-full transition-colors ${isActive
+                                ? "bg-sidebar-primary text-sidebar-primary-foreground font-medium"
+                                : "hover:bg-sidebar-accent/50"
+                              }`
+                            }
+                          >
+                            <item.icon className="ml-2 h-4 w-4" />
+                            {!isCollapsed && <span>{item.title}</span>}
+                          </NavLink>
                         </SidebarMenuButton>
-                      </CollapsibleTrigger>
+                        {!isCollapsed && (
+                          <CollapsibleTrigger asChild>
+                            <button className="p-2 hover:bg-sidebar-accent/50 rounded-md">
+                              <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                            </button>
+                          </CollapsibleTrigger>
+                        )}
+                      </div>
                       {!isCollapsed && (
                         <CollapsibleContent>
                           <SidebarMenuSub className="border-r-0 mr-0 pr-0">
