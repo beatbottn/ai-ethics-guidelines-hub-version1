@@ -107,14 +107,21 @@ const Principles = () => {
 
             <div className="pt-4">
               <Button
+                type="button"
                 size="lg"
-                onClick={() => {
+                onClick={async () => {
+                  const res = await fetch("/images/sivana-poster.png");
+                  const blob = await res.blob();
+                  const url = URL.createObjectURL(blob);
+
                   const link = document.createElement("a");
-                  link.href = "/images/sivana-poster.png";
+                  link.href = url;
                   link.download = "ethical-principles-poster.png";
                   document.body.appendChild(link);
                   link.click();
-                  document.body.removeChild(link);
+                  link.remove();
+
+                  URL.revokeObjectURL(url);
                 }}
                 className="w-full gap-2"
               >
