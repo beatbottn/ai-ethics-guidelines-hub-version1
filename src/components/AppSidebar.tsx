@@ -47,7 +47,7 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border">
+    <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border min-w-[--sidebar-width]">
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
