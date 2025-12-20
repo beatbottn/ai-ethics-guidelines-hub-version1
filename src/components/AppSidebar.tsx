@@ -55,8 +55,8 @@ export function AppSidebar() {
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   {item.subItems ? (
-                    <Collapsible defaultOpen className="group/collapsible">
-                      <div className="flex items-center">
+                    <Collapsible defaultOpen className="group/collapsible w-full">
+                      <div className="flex w-full items-center">
                         <SidebarMenuButton
                           asChild
                           isActive={isActive(item.url)}
