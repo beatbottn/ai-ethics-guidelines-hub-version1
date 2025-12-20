@@ -1,4 +1,5 @@
 import { AlertTriangle, TrendingDown, Lock, Brain, ShieldAlert } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const challenges = [
   {
@@ -100,8 +101,8 @@ const Challenges = () => {
         {/* Header */}
         <div className="space-y-4">
           <h1 className="text-5xl font-bold text-foreground">אתגרי AI: מה חשוב להכיר כאשר טעויות גורמות לנזק אמיתי</h1>
-          <div className="prose prose-lg max-w-none text-foreground/90 space-y-4">
-            <p className="text-xl leading-relaxed">
+          <div className="card-elevated p-8">
+            <p className="text-xl text-foreground/90 leading-relaxed">
               כלי AI מציעים יתרונות רבים למחקר משתמשים, אבל הם גם מסתירים סיכונים אמיתיים. כאשר AI טועה במחקר, ההשלכות
               לא נשארות על הנייר - הן יכולות להוביל להחלטות עיצוב שפוגעות בבריאות אנשים, מפספסות קבוצות פגיעות, או
               מעמיקות אי-שוויון חברתי. להלן חמישה סיכונים מרכזיים שחשוב להכיר- כי ההשפעה שלהם על המשתמשים שלנו היא
@@ -111,58 +112,62 @@ const Challenges = () => {
         </div>
 
         {/* Challenges List */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {challenges.map((challenge) => {
             const Icon = challenge.icon;
             return (
-              <div
-                key={challenge.id}
-                className={`challenge-card ${challenge.bgColor} hover:shadow-[var(--shadow-strong)] transition-all duration-300`}
-              >
-                <div className="flex items-start gap-4">
-                  <div className={`p-4 rounded-lg bg-gradient-to-br ${challenge.color} text-white flex-shrink-0`}>
-                    <Icon className="h-7 w-7" />
-                  </div>
-                  <div className="flex-1 space-y-4">
-                    <div>
-                      <h2 className="text-2xl font-bold text-foreground">{challenge.title}</h2>
-                      <p className="text-lg text-muted-foreground font-medium">({challenge.titleEn})</p>
-                    </div>
-                    <p className="text-foreground/90 leading-relaxed text-lg">{challenge.description}</p>
-                    
-                    {/* Real World Example */}
-                    <div className="mt-6 p-4 bg-background/50 rounded-lg border border-border/50">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">דוגמא מהעולם האמיתי</h3>
-                      <p className="text-foreground/80 leading-relaxed">{challenge.realWorldExample}</p>
-                      
-                      {challenge.additionalExample && (
-                        <p className="text-foreground/80 leading-relaxed mt-3">{challenge.additionalExample}</p>
-                      )}
-                      
-                      {/* Links */}
-                      <div className="mt-4 flex flex-wrap gap-2">
-                        {challenge.links.map((link, index) => (
-                          <a
-                            key={index}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 text-sm text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
-                          >
-                            {link.text}
-                            <span className="text-xs">↗</span>
-                          </a>
-                        ))}
+              <div key={challenge.id} className="card-elevated">
+                <Accordion type="single" collapsible>
+                  <AccordionItem value={challenge.id} className="border-none">
+                    <AccordionTrigger className="px-8 py-6 hover:no-underline">
+                      <div className="flex items-start gap-4 text-right w-full">
+                        <div className={`p-3 rounded-lg bg-gradient-to-br ${challenge.color} text-white flex-shrink-0`}>
+                          <Icon className="h-6 w-6" />
+                        </div>
+                        <div className="flex-1">
+                          <h2 className="text-2xl font-bold text-foreground">{challenge.title}</h2>
+                          <p className="text-lg text-muted-foreground mt-1">({challenge.titleEn})</p>
+                          <p className="text-base text-foreground/80 mt-2 leading-relaxed">
+                            {challenge.description}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    
-                    {/* UX Context */}
-                    <div className="p-4 bg-primary/5 rounded-lg border-r-4 border-r-primary">
-                      <h3 className="text-lg font-semibold text-foreground mb-2">בהקשר מחקר UX</h3>
-                      <p className="text-foreground/80 leading-relaxed">{challenge.uxContext}</p>
-                    </div>
-                  </div>
-                </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-8 pb-6 space-y-6">
+                      {/* Real World Example */}
+                      <div className="bg-background/50 rounded-lg p-6 border border-border/50">
+                        <h3 className="text-lg font-bold text-foreground mb-3">דוגמא מהעולם האמיתי</h3>
+                        <p className="text-foreground/80 leading-relaxed">{challenge.realWorldExample}</p>
+                        
+                        {challenge.additionalExample && (
+                          <p className="text-foreground/80 leading-relaxed mt-4">{challenge.additionalExample}</p>
+                        )}
+                        
+                        {/* Links */}
+                        <div className="mt-4 flex flex-wrap gap-3">
+                          {challenge.links.map((link, index) => (
+                            <a
+                              key={index}
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1 text-sm text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
+                            >
+                              {link.text}
+                              <span className="text-xs">↗</span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                      
+                      {/* UX Context */}
+                      <div className="p-6 bg-primary/5 rounded-lg border-r-4 border-r-primary">
+                        <h3 className="text-lg font-bold text-foreground mb-3">בהקשר מחקר UX</h3>
+                        <p className="text-foreground/80 leading-relaxed">{challenge.uxContext}</p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion>
               </div>
             );
           })}
