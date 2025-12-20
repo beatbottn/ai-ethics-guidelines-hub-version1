@@ -37,6 +37,10 @@ const challenges = [
         text: "Stanford HAI - AI hallucinations in legal filings",
         url: "https://hai.stanford.edu/news/hallucinating-law-legal-mistakes-large-language-models-are-pervasive",
       },
+      {
+        text: "Damien Charlotin Database - Tracking AI hallucinations in court",
+        url: "https://www.damiencharlotin.com/hallucinations/",
+      },
     ],
     uxContext:
       'כאשר משתמשים ב-AI לסיכום ראיונות או יצירת מסעות משתמש, המודל עלול "למלא חסרים" בנתונים - לייחס ציטוטים שמשתתפים לא אמרו, ליצור "נקודות כאב" שלא עלו במחקר, או להמציא סטטיסטיקות תומכות. זה עלול להוביל להחלטות עיצוב מבוססות על נתונים פיקטיביים.',
