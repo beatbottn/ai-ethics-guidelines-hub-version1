@@ -98,26 +98,26 @@ const Principles = () => {
                 alt="פוסטר עקרונות אתיים למחקר משתמשים" 
                 className="w-32 rounded-lg shadow-md flex-shrink-0"
               />
-              <div className="space-y-4">
-                <p className="text-foreground/90 leading-relaxed text-lg">
-                  תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
-                </p>
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    const link = document.createElement('a');
-                    link.href = '/images/sivana-poster.png';
-                    link.download = 'ethical-principles-poster.png';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                  }}
-                  className="gap-2"
-                >
-                  <Download className="h-5 w-5" />
-                  הורידו את התמונה ברזולוציה מלאה
-                </Button>
-              </div>
+              <p className="text-foreground/90 leading-relaxed text-lg">
+                תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
+              </p>
+            </div>
+            <div className="mt-auto pt-4">
+              <Button
+                size="lg"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/images/sivana-poster.png';
+                  link.download = 'ethical-principles-poster.png';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="gap-2"
+              >
+                <Download className="h-5 w-5" />
+                הורידו את התמונה ברזולוציה מלאה
+              </Button>
             </div>
           </div>
 
