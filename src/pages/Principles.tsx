@@ -92,22 +92,33 @@ const Principles = () => {
           {/* Right Container - Poster */}
           <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-4 flex flex-col">
             <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
-            <img 
-              src="/images/sivana-poster.png" 
-              alt="פוסטר עקרונות אתיים למחקר משתמשים" 
-              className="w-48 rounded-lg shadow-md"
-            />
-            <p className="text-foreground/90 leading-relaxed text-lg">
-              תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
-            </p>
-            <a 
-              href="/images/sivana-poster.png" 
-              download="ethical-principles-poster.png"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
-            >
-              <Download className="h-5 w-5" />
-              הורידו את התמונה ברזולוציה מלאה
-            </a>
+            <div className="flex gap-6 items-start">
+              <img 
+                src="/images/sivana-poster.png" 
+                alt="פוסטר עקרונות אתיים למחקר משתמשים" 
+                className="w-32 rounded-lg shadow-md flex-shrink-0"
+              />
+              <div className="space-y-4">
+                <p className="text-foreground/90 leading-relaxed text-lg">
+                  תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
+                </p>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = '/images/sivana-poster.png';
+                    link.download = 'ethical-principles-poster.png';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className="gap-2"
+                >
+                  <Download className="h-5 w-5" />
+                  הורידו את התמונה ברזולוציה מלאה
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Left Container - CTA */}
