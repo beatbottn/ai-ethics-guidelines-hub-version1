@@ -20,7 +20,7 @@ const About = () => {
 
         {/* Methodology Section */}
         <Collapsible open={isMethodologyOpen} onOpenChange={setIsMethodologyOpen} className="card-elevated p-8">
-          <div className="flex items-start gap-4">
+          <div className="flex items-center gap-4">
             <div className="flex-1 space-y-4">
               <h2 className="text-3xl font-bold text-foreground">מתודולוגיה ומקורות</h2>
               <p className="text-lg leading-relaxed text-foreground/90">
@@ -236,8 +236,8 @@ const About = () => {
                 </p>
               </CollapsibleContent>
             </div>
-            <CollapsibleTrigger className="mt-1 p-1 hover:bg-muted rounded transition-colors">
-              <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${isMethodologyOpen ? "rotate-180" : "-rotate-90"}`} />
+            <CollapsibleTrigger className="p-1 hover:bg-muted rounded transition-colors self-center">
+              <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${isMethodologyOpen ? "rotate-180" : ""}`} />
             </CollapsibleTrigger>
           </div>
         </Collapsible>
