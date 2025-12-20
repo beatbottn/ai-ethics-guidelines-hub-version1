@@ -1,11 +1,10 @@
 import { Home, BookOpen, AlertTriangle, ClipboardList, Users } from "lucide-react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -40,6 +39,13 @@ export function AppSidebar() {
   const isCollapsed = state === "collapsed";
   const location = useLocation();
 
+  const isActive = (url: string, exact: boolean = false) => {
+    if (exact) {
+      return location.pathname === url;
+    }
+    return location.pathname === url || location.pathname.startsWith(url + "/");
+  };
+
   return (
     <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border">
       <SidebarContent>
@@ -51,19 +57,15 @@ export function AppSidebar() {
                   {item.subItems ? (
                     <Collapsible defaultOpen className="group/collapsible">
                       <div className="flex items-center">
-                        <SidebarMenuButton asChild className="flex-1">
-                          <NavLink
-                            to={item.url}
-                            className={({ isActive }) =>
-                              `flex items-center w-full transition-colors ${isActive
-                                ? "!bg-sidebar-primary !text-sidebar-primary-foreground font-medium"
-                                : "hover:bg-sidebar-accent/50"
-                              }`
-                            }
-                          >
+                        <SidebarMenuButton
+                          asChild
+                          isActive={isActive(item.url)}
+                          className="flex-1"
+                        >
+                          <Link to={item.url}>
                             <item.icon className="ml-2 h-4 w-4" />
                             {!isCollapsed && <span>{item.title}</span>}
-                          </NavLink>
+                          </Link>
                         </SidebarMenuButton>
                         {!isCollapsed && (
                           <CollapsibleTrigger asChild>
@@ -76,40 +78,31 @@ export function AppSidebar() {
                       {!isCollapsed && (
                         <CollapsibleContent>
                           <SidebarMenuSub className="border-r-0 mr-0 pr-0">
-                            {item.subItems.map((subItem) => {
-                              const isActive = location.pathname === subItem.url;
-                              return (
-                                <SidebarMenuSubItem key={subItem.url}>
-                                  <SidebarMenuSubButton 
-                                    asChild 
-                                    className={`w-full !bg-transparent hover:!bg-sidebar-accent/50 ${isActive ? "!ring-1 !ring-sidebar-ring font-medium" : ""}`}
-                                  >
-                                    <NavLink to={subItem.url}>
-                                      <span>{subItem.title}</span>
-                                    </NavLink>
-                                  </SidebarMenuSubButton>
-                                </SidebarMenuSubItem>
-                              );
-                            })}
+                            {item.subItems.map((subItem) => (
+                              <SidebarMenuSubItem key={subItem.url}>
+                                <SidebarMenuSubButton
+                                  asChild
+                                  isActive={isActive(subItem.url, true)}
+                                >
+                                  <Link to={subItem.url}>
+                                    <span>{subItem.title}</span>
+                                  </Link>
+                                </SidebarMenuSubButton>
+                              </SidebarMenuSubItem>
+                            ))}
                           </SidebarMenuSub>
                         </CollapsibleContent>
                       )}
                     </Collapsible>
                   ) : (
-                    <SidebarMenuButton asChild>
-                      <NavLink
-                        to={item.url}
-                        end={item.url === "/"}
-                        className={({ isActive }) =>
-                          `flex items-center w-full transition-colors focus:outline-none focus:ring-2 focus:ring-sidebar-ring focus:ring-offset-1 rounded-md ${isActive
-                            ? "!bg-sidebar-primary !text-sidebar-primary-foreground font-medium"
-                            : "hover:bg-sidebar-accent/50"
-                          }`
-                        }
-                      >
+                    <SidebarMenuButton
+                      asChild
+                      isActive={isActive(item.url, item.url === "/")}
+                    >
+                      <Link to={item.url}>
                         <item.icon className="ml-2 h-4 w-4" />
                         {!isCollapsed && <span>{item.title}</span>}
-                      </NavLink>
+                      </Link>
                     </SidebarMenuButton>
                   )}
                 </SidebarMenuItem>
