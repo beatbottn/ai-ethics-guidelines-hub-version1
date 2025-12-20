@@ -23,7 +23,7 @@ const Index = () => {
       {/* Introduction */}
       <section className="py-12 px-6 md:px-12 max-w-5xl mx-auto">
         <div className="card-elevated p-8 space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">מבוא</h2>
+          <h2 className="text-3xl font-bold text-foreground">AI במחקר: ההזדמנות והאחריות</h2>
           <div className="prose prose-lg max-w-none text-foreground/90 leading-relaxed space-y-4">
             <p>
               בעידן הדיגיטלי המתפתח, כלי הבינה המלאכותית (AI) הופכים לחלק בלתי נפרד מעבודת חוקרי המשתמשים. AI מציע
