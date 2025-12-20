@@ -276,7 +276,7 @@ const About = () => {
           {/* Author 2 - Naama */}
           <div className="flex flex-col md:flex-row gap-6 items-start">
             <img
-              src="/images/naama-enhanced.png"
+              src="/images/naama-new.png"
               alt="נעמה שפירא"
               className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover shrink-0 shadow-lg"
             />
