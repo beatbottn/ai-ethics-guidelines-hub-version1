@@ -29,10 +29,10 @@ const About = () => {
                   <a href="https://www.hhs.gov/ohrp/regulations-and-policy/belmont-report/index.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Belmont Report</a> | The National Commission | 1976
                 </li>
                 <li>
-                  <a href="https://www.turing.ac.uk/sites/default/files/2019-06/understanding_artificial_intelligence_ethics_and_safety.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Understanding artificial intelligence ethics and safety</a> | The Alan Turing Institute | 2019
+                  <a href="https://www.turing.ac.uk/sites/default/files/2019-08/understanding_artificial_intelligence_ethics_and_safety.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Understanding artificial intelligence ethics and safety</a> | The Alan Turing Institute | 2019
                 </li>
                 <li>
-                  <a href="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft-Responsible-AI-Standard-General-Requirements.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Microsoft Responsible AI Standard (General Requirements)</a> | Microsoft | 2022
+                  <a href="https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/final/en-us/microsoft-brand/documents/Microsoft-Responsible-AI-Standard-General-Requirements.pdf?culture=en-us&country=us" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Microsoft Responsible AI Standard (General Requirements)</a> | Microsoft | 2022
                 </li>
               </ul>
             </div>
@@ -42,10 +42,10 @@ const About = () => {
               <h3 className="text-xl font-semibold text-foreground">✓ מסמכי רגולציה ומדיניות ממשלתית ובינלאומית (Global & Local Governance)</h3>
               <ul className="list-disc list-inside space-y-2 text-foreground/80">
                 <li>
-                  <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AI Act (Regulation (EU) 2024/1689)</a> | European Commission (EU) | 2024
+                  <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AI Act (Regulation (EU) 2024/1689)</a> | European Commission (EU) | 2024
                 </li>
                 <li>
-                  <a href="https://www.oecd.org/en/topics/sub-issues/ai-principles.html" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Recommendation of the Council on Artificial Intelligence (OECD AI Principles)</a> | OECD | 2019 (מעודכן ל-2024)
+                  <a href="https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Recommendation of the Council on Artificial Intelligence (OECD AI Principles)</a> | OECD | 2019 (מעודכן ל-2024)
                 </li>
                 <li>
                   <a href="https://www.idi.org.il/media/21222/human-machine-state.pdf" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">אדם, מכונה, מדינה: לקראת אסדרה של בינה מלאכותית</a> | המכון הישראלי לדמוקרטיה - עמיר כהנא, תהילה שוורץ אלטשולר | 2023
@@ -64,7 +64,7 @@ const About = () => {
                   <a href="https://www.york.ac.uk/staff/research/governance/research-policies/generative-ai/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Responsible AI Use in Research Policy</a> | University of York | 2024
                 </li>
                 <li>
-                  <a href="https://www.ibm.com/design/ai/ethics/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">IBM Design for AI: Ethics & Practices</a> | IBM | 2024
+                  <a href="https://www.ibm.com/design/practices/#ibm-design-for-ai" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">IBM Design for AI: Ethics & Practices</a> | IBM | 2024
                 </li>
                 <li>
                   <a href="https://maze.co/collections/ai/ethics-user-research/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AI Ethics in UX Research: Guardrails and Best Practices</a> | Maze | 2024
@@ -77,7 +77,7 @@ const About = () => {
               <h3 className="text-xl font-semibold text-foreground">✓ מחקרים אקדמיים ותיאורטיים</h3>
               <ul className="list-disc list-inside space-y-2 text-foreground/80">
                 <li>
-                  <a href="https://library.educause.edu/resources/2025/6/ai-ethical-guidelines" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AI Ethical Guidelines</a> | EDUCAUSE Working Group | 2025
+                  <a href="https://lumivero.com/resources/blog/state-of-ai-in-qualitative-research/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AI Ethical Guidelines</a> | EDUCAUSE Working Group | 2025
                 </li>
                 <li>
                   <a href="https://lumivero.com/resources/blog/state-of-ai-in-qualitative-research/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">The state of AI in qualitative research in 2025</a> | Lumivero | 2025
@@ -86,7 +86,7 @@ const About = () => {
                   <a href="https://rfkhumanrights.org/our-voices/bias-in-code-algorithm-discrimination-in-financial-systems/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Bias in Code: Algorithm Discrimination in Financial Systems</a> | Writer: Spencer Wang, Robert & Ethel Kennedy Human Rights Center | 2025
                 </li>
                 <li>
-                  <a href="https://link.springer.com/article/10.1007/s00146-025-02673-4" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Examining trends in AI ethics across countries (Quantitative Analysis)</a> | אושרי בר-גיל (אוניברסיטת בר-אילן) | 2025
+                  <a href="https://doi.org/10.1007/s00146-025-02673-4" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Examining trends in AI ethics across countries (Quantitative Analysis)</a> | אושרי בר-גיל (אוניברסיטת בר-אילן) | 2025
                 </li>
               </ul>
             </div>
