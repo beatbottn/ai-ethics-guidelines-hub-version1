@@ -53,10 +53,11 @@ const Principles = () => {
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
         <div className="space-y-4">
-          <h1 className="text-5xl font-bold text-foreground">ארבעה עקרונות אתיים יסוד</h1>
+          <h1 className="text-5xl font-bold text-foreground">על מה חשוב לשמור?</h1>
           <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl">
-            לצורך בניית הבסיס המשותף, הנה סקירה קצרה של ארבעת עקרונות היסוד האוניברסליים: מרבית
-            המסגרות האתיות מתבססות עליהם.
+            לכולנו יש מצפן מוסרי שמנחה אותנו לשמור על אנשים אחרים ועל עצמנו. כשאנחנו עובדים עם AI במחקר משתמשים, אותו
+            מצפן הופך להיות קריטי עוד יותר. הנה ארבעה עקרונות אתיקה יסודיים שכדאי להכיר ולשמור עליהם – ההמלצות במדריך
+            גובשו על בסיס העקרונות הללו:
           </p>
         </div>
 
@@ -88,8 +89,8 @@ const Principles = () => {
         <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary">
           <h2 className="text-2xl font-bold text-foreground mb-4">שמירה על המצפן האתי</h2>
           <p className="text-foreground/90 leading-relaxed text-lg">
-            העקרונות הללו, והמצפן האתי מזמינים אותנו להפעיל חשיבה ביקורתית בכל אחד משלבי המחקר
-            והעשייה שלנו בתחום החדשנות - לפעול מתוך כוונה ושמירה על העבודה בתהליך.
+            העקרונות הללו, והמצפן האתי מזמינים אותנו להפעיל חשיבה ביקורתית בכל אחד משלבי המחקר והעשייה שלנו בתחום
+            החדשנות - לפעול מתוך כוונה ושמירה על העבודה בתהליך.
           </p>
         </div>
       </div>
