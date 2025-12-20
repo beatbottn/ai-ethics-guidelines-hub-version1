@@ -43,7 +43,6 @@ const About = () => {
                     if (w) e.preventDefault();
                   }} className="text-primary hover:underline">Microsoft Responsible AI Standard (General Requirements)</a> | Microsoft | 2022
                 </li>
-                </li>
               </ul>
             </div>
 
