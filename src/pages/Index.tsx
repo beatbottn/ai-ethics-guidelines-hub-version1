@@ -103,31 +103,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Key Message Section */}
-      <section className="py-16 px-6 md:px-12 max-w-5xl mx-auto">
-        <div className="card-elevated bg-gradient-to-bl from-primary/5 to-accent/5 p-8 border-r-4 border-r-primary">
-          <h2 className="text-2xl font-bold text-foreground mb-4">עקרונות המנחים את השימוש ב-AI במחקר</h2>
-          <div className="space-y-4 text-foreground/90 leading-relaxed">
-            <p>
-              <strong>שימוש ב-AI</strong> במחקר משתמשים בא להעצים את עבודת החוקר.ת ידי שחרורו מהמשימות שגרתיות וחוזרות,
-              ובכך מאפשרים התמקדות בהסקת תובנות ובחשיבה אנושית.
-            </p>
-            <p>
-              <strong>AI משמש ככלי משלים</strong> ולא כמחליף לעבודת החוקר.ת. כדי לפעול מהמצפן המוסרי שלנו, ולשמירה על
-              עקרונות האתיקה - אוטונומיה, אי גרימת פגיעה, עשיית טוב וצדק - עלינו להבטיח שהשימוש ב-AI נשאר כלי עזר ותמיכה
-              בלבד.
-            </p>
-          </div>
-          <div className="mt-6">
-            <Link to="/principles">
-              <Button size="lg" className="bg-primary hover:bg-primary-dark">
-                קראו על העקרונות המלאים
-                <ArrowLeft className="mr-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
