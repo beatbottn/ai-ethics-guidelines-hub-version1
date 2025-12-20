@@ -51,10 +51,10 @@ const Index = () => {
                 <div className="p-3 rounded-lg bg-primary/10 text-primary">
                   <BookOpen className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-semibold">עקרונות אתיים</h3>
+                <h3 className="text-xl font-semibold">על מה חשוב שנשמור?</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed flex-grow">
-                ארבעה עקרונות יסוד אוניברסליים: אוטונומיה, אי-גרימת נזק, עשיית טוב וצדק
+                אי-גרימת נזק, הוגנות וצדק, שמירה על אוטונומיה, ועשיית טוב: העקרונות שינחו אותנו בכל שלב בהבנת המשתמשים
               </p>
               <div className="mt-4 flex items-center text-primary font-medium group-hover:gap-2 transition-all">
                 <span>קראו עוד</span>
@@ -73,7 +73,7 @@ const Index = () => {
                 <h3 className="text-xl font-semibold">אתגרי AI</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed flex-grow">
-                חמישה אתגרים מרכזיים: הטיה אלגוריתמית, הזיות, כשל במקור נתונים, חוסר שקיפות והחלשת השיפוט האנושי
+                הסיכונים שחשוב להכיר: כאשר AI טועה, מטעה, או מחליש את המחקר{" "}
               </p>
               <div className="mt-4 flex items-center text-destructive font-medium group-hover:gap-2 transition-all">
                 <span>קראו עוד</span>
@@ -89,10 +89,10 @@ const Index = () => {
                 <div className="p-3 rounded-lg bg-accent/10 text-accent">
                   <ClipboardList className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-semibold">שלבי המחקר</h3>
+                <h3 className="text-xl font-semibold">המדריך לפי שלבים</h3>
               </div>
               <p className="text-muted-foreground leading-relaxed flex-grow">
-                המלצות מפורטות לארבעה שלבים: תכנון, איסוף נתונים, ניתוח והצגת ממצאים
+                מתכנון מחקר ועד הצגת המלצות: איך לעבוד עם AI בצורה אחראית בכל שלב
               </p>
               <div className="mt-4 flex items-center text-accent font-medium group-hover:gap-2 transition-all">
                 <span>התחילו כאן</span>
