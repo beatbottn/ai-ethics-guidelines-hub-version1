@@ -19,25 +19,21 @@ const About = () => {
         </div>
 
         {/* Methodology Section */}
-        <Collapsible open={isMethodologyOpen} onOpenChange={setIsMethodologyOpen} className="card-elevated p-8 space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">מתודולוגיה ומקורות</h2>
-          <div className="prose prose-lg max-w-none text-foreground/90 space-y-4">
-            <p className="text-lg leading-relaxed">
-              המדריך נבנה על בסיס עקרונות אתיים מוכחים ממחקר אקדמי, הנחיות תעשייתיות ותקנים בינלאומיים לשמירה על אתיקה
-              הוגנת, אבטחה ופרטיות ושימוש אחראי ב-AI. שילבנו תובנות ממגוון מקורות מובילים: מסגרות אתיות, רגולציה,
-              מתודולוגיות עיצוב ומחקרים אקדמיים.
-            </p>
-            
-            <CollapsibleTrigger asChild>
-              <Button variant="ghost" className="gap-2 text-primary hover:text-primary/80">
-                {isMethodologyOpen ? "הסתר מקורות" : "הצג את כל המקורות"}
-                <ChevronDown className={`h-4 w-4 transition-transform ${isMethodologyOpen ? "rotate-180" : ""}`} />
-              </Button>
+        <Collapsible open={isMethodologyOpen} onOpenChange={setIsMethodologyOpen} className="card-elevated p-8">
+          <div className="flex items-start gap-4">
+            <CollapsibleTrigger className="mt-1 p-1 hover:bg-muted rounded transition-colors">
+              <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${isMethodologyOpen ? "rotate-180" : "-rotate-90"}`} />
             </CollapsibleTrigger>
-          </div>
+            <div className="flex-1 space-y-4">
+              <h2 className="text-3xl font-bold text-foreground">מתודולוגיה ומקורות</h2>
+              <p className="text-lg leading-relaxed text-foreground/90">
+                המדריך נבנה על בסיס עקרונות אתיים מוכחים ממחקר אקדמי, הנחיות תעשייתיות ותקנים בינלאומיים לשמירה על אתיקה
+                הוגנת, אבטחה ופרטיות ושימוש אחראי ב-AI. שילבנו תובנות ממגוון מקורות מובילים: מסגרות אתיות, רגולציה,
+                מתודולוגיות עיצוב ומחקרים אקדמיים.
+              </p>
 
-          <CollapsibleContent className="space-y-6">
-            {/* מסגרות אתיות */}
+              <CollapsibleContent className="space-y-6 pt-2">
+                {/* מסגרות אתיות */}
             <div className="space-y-3">
               <h3 className="text-xl font-semibold text-foreground">
                 ✓ מסגרות אתיות מוכרות המתוות עקרונות אתיים אוניברסליים
@@ -237,11 +233,13 @@ const About = () => {
               </ul>
             </div>
 
-            <p className="text-lg leading-relaxed text-foreground/80 pt-4">
-              ההמלצות מתמקדות בכלי AI מבוססי שיחה (LLMs) שבהם משתמשים חוקרי UX מדי יום, ומספקות הנחיות מעשיות ישימות לכל
-              שלב במחקר.
-            </p>
-          </CollapsibleContent>
+                <p className="text-lg leading-relaxed text-foreground/80 pt-4">
+                  ההמלצות מתמקדות בכלי AI מבוססי שיחה (LLMs) שבהם משתמשים חוקרי UX מדי יום, ומספקות הנחיות מעשיות ישימות לכל
+                  שלב במחקר.
+                </p>
+              </CollapsibleContent>
+            </div>
+          </div>
         </Collapsible>
 
         {/* Authors Section */}
