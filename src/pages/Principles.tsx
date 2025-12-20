@@ -1,4 +1,7 @@
-import { Shield, Heart, Scale, User } from "lucide-react";
+import { Shield, Heart, Scale, User, ArrowLeft, Download } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import sivanaPoster from "@/assets/sivana-poster.png";
 
 const principles = [
   {
@@ -85,13 +88,47 @@ const Principles = () => {
           })}
         </div>
 
-        {/* Summary */}
-        <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary">
-          <h2 className="text-2xl font-bold text-foreground mb-4">שמירה על המצפן האתי</h2>
-          <p className="text-foreground/90 leading-relaxed text-lg">
-            העקרונות הללו, והמצפן האתי מזמינים אותנו להפעיל חשיבה ביקורתית בכל אחד משלבי המחקר והעשייה שלנו בתחום
-            החדשנות - לפעול מתוך כוונה ושמירה על העבודה בתהליך.
-          </p>
+        {/* Two Side-by-Side Containers */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Right Container - Poster */}
+          <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-4">
+            <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
+            <img 
+              src={sivanaPoster} 
+              alt="פוסטר עקרונות אתיים למחקר משתמשים" 
+              className="w-full rounded-lg shadow-md"
+            />
+            <p className="text-foreground/90 leading-relaxed text-lg">
+              תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
+            </p>
+            <a 
+              href={sivanaPoster} 
+              download="ethical-principles-poster.png"
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
+            >
+              <Download className="h-5 w-5" />
+              הורידו את התמונה ברזולוציה מלאה
+            </a>
+          </div>
+
+          {/* Left Container - CTA */}
+          <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-4 flex flex-col">
+            <h2 className="text-2xl font-bold text-foreground">מעקרונות ליישום</h2>
+            <p className="text-foreground/90 leading-relaxed text-lg">
+              ארבעת עקרונות אלו הם הבסיס לעבודה אחראית עם AI במחקר משתמשים.
+            </p>
+            <p className="text-foreground/90 leading-relaxed text-lg">
+              במדריך המעשי תמצאו כיצד ליישם אותם בכל שלב: מתכנון המחקר ועד הצגת הממצאים, עם המלצות קונקרטיות ופרומפטים לדוגמה.
+            </p>
+            <div className="mt-auto pt-4">
+              <Button asChild size="lg" className="gap-2">
+                <Link to="/research-phases">
+                  התחילו במדריך המעשי
+                  <ArrowLeft className="h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
