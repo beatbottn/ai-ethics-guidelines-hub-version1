@@ -90,30 +90,33 @@ const Principles = () => {
         {/* Two Side-by-Side Containers */}
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
           {/* Right Container - Poster */}
-          <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-4 flex flex-col">
-            <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
-            <div className="flex gap-6 items-start">
-              <img 
-                src="/images/sivana-poster.png" 
-                alt="פוסטר עקרונות אתיים למחקר משתמשים" 
-                className="w-32 rounded-lg shadow-md flex-shrink-0"
-              />
-              <p className="text-foreground/90 leading-relaxed text-lg">
-                תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
-              </p>
+          <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary flex flex-col h-full">
+            <div className="flex-1 space-y-4">
+              <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
+              <div className="flex gap-6 items-start">
+                <img
+                  src="/images/sivana-poster.png"
+                  alt="פוסטר עקרונות אתיים למחקר משתמשים"
+                  className="w-32 rounded-lg shadow-md flex-shrink-0"
+                />
+                <p className="text-foreground/90 leading-relaxed text-lg">
+                  תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
+                </p>
+              </div>
             </div>
-            <div className="mt-auto pt-4">
+
+            <div className="pt-4">
               <Button
                 size="lg"
                 onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/images/sivana-poster.png';
-                  link.download = 'ethical-principles-poster.png';
+                  const link = document.createElement("a");
+                  link.href = "/images/sivana-poster.png";
+                  link.download = "ethical-principles-poster.png";
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="gap-2"
+                className="w-full gap-2"
               >
                 <Download className="h-5 w-5" />
                 הורידו את התמונה ברזולוציה מלאה
@@ -122,16 +125,20 @@ const Principles = () => {
           </div>
 
           {/* Left Container - CTA */}
-          <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-4 flex flex-col">
-            <h2 className="text-2xl font-bold text-foreground">מעקרונות ליישום</h2>
-            <p className="text-foreground/90 leading-relaxed text-lg">
-              ארבעת עקרונות אלו הם הבסיס לעבודה אחראית עם AI במחקר משתמשים.
-            </p>
-            <p className="text-foreground/90 leading-relaxed text-lg">
-              במדריך המעשי תמצאו כיצד ליישם אותם בכל שלב: מתכנון המחקר ועד הצגת הממצאים, עם המלצות קונקרטיות ופרומפטים לדוגמה.
-            </p>
-            <div className="mt-auto pt-4">
-              <Button asChild size="lg" className="gap-2">
+          <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary flex flex-col h-full">
+            <div className="flex-1 space-y-4">
+              <h2 className="text-2xl font-bold text-foreground">מעקרונות ליישום</h2>
+              <p className="text-foreground/90 leading-relaxed text-lg">
+                ארבעת עקרונות אלו הם הבסיס לעבודה אחראית עם AI במחקר משתמשים.
+              </p>
+              <p className="text-foreground/90 leading-relaxed text-lg">
+                במדריך המעשי תמצאו כיצד ליישם אותם בכל שלב: מתכנון המחקר ועד הצגת הממצאים, עם המלצות קונקרטיות ופרומפטים
+                לדוגמה.
+              </p>
+            </div>
+
+            <div className="pt-4">
+              <Button asChild size="lg" className="w-full gap-2">
                 <Link to="/phases">
                   התחילו במדריך המעשי
                   <ArrowLeft className="h-5 w-5" />
