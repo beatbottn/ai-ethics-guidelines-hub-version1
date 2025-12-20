@@ -97,7 +97,7 @@ const Principles = () => {
                 <img
                   src="/images/sivana-poster.png"
                   alt="פוסטר עקרונות אתיים למחקר משתמשים"
-                  className="w-32 rounded-lg shadow-md flex-shrink-0"
+                  className="w-48 rounded-lg shadow-md flex-shrink-0"
                 />
                 <p className="text-foreground/90 leading-relaxed text-lg">
                   תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
