@@ -1,9 +1,7 @@
 import { Linkedin, BookOpen, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const About = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
+  return <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Header */}
         <div className="space-y-4">
@@ -19,10 +17,7 @@ const About = () => {
         <div className="card-elevated p-8 space-y-6">
           <h2 className="text-3xl font-bold text-foreground">מתודולוגיה ומקורות</h2>
           <div className="prose prose-lg max-w-none text-foreground/90 space-y-4">
-            <p className="text-lg leading-relaxed">
-              המדריך נבנה על בסיס עקרונות אתיים מוכחים ממחקר אקדמי, הנחיות תעשייתיות ותקנים בינלאומיים לשמירה על אתיקה
-              הוגנת, אבטחה ופרטיות ושימוש אחראי ב-AI. שילבנו תובנות ממגוון מקורות מובילים, כגון: .
-            </p>
+            <p className="text-lg leading-relaxed">המדריך נבנה על בסיס עקרונות אתיים מוכחים ממחקר אקדמי, הנחיות תעשייתיות ותקנים בינלאומיים לשמירה על אתיקה הוגנת, אבטחה ופרטיות ושימוש אחראי ב-AI. שילבנו תובנות ממגוון מקורות מובילים, כגון:</p>
           </div>
         </div>
 
@@ -36,11 +31,7 @@ const About = () => {
           {/* Author 1 - Sivana */}
           <div className="flex flex-col md:flex-row gap-6 items-start">
             <div className="w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden shrink-0 shadow-lg bg-muted">
-              <img
-                src="/images/sivana-enhanced.png"
-                alt="סיונה שרלג"
-                className="w-full h-full object-cover scale-110"
-              />
+              <img src="/images/sivana-enhanced.png" alt="סיונה שרלג" className="w-full h-full object-cover scale-110" />
             </div>
             <div className="space-y-3">
               <h3 className="text-2xl font-semibold text-foreground">סיונה שרלג</h3>
@@ -59,11 +50,7 @@ const About = () => {
 
           {/* Author 2 - Naama */}
           <div className="flex flex-col md:flex-row gap-6 items-start">
-            <img
-              src="/images/naama-enhanced.png"
-              alt="נעמה שפירא"
-              className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover shrink-0 shadow-lg"
-            />
+            <img src="/images/naama-enhanced.png" alt="נעמה שפירא" className="w-28 h-28 md:w-32 md:h-32 rounded-full object-cover shrink-0 shadow-lg" />
             <div className="space-y-3">
               <h3 className="text-2xl font-semibold text-foreground">נעמה שפירא</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -90,8 +77,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default About;
