@@ -167,7 +167,7 @@ const Challenges = () => {
         <div className="card-elevated p-8 bg-destructive/5 border-r-4 border-r-destructive">
           <h2 className="text-2xl font-bold text-foreground mb-4">ממודעות לפעולה</h2>
           <p className="text-foreground/90 leading-relaxed text-lg">
-            מודעות לאתגרים האלה אינה אמורה להרתיע – להפך, היא מעניקה לכם כוח לפעול בביטחון. במדריך שלנו תמצאו את הכלים
+            מודעות לאתגרים האלה אינה אמורה להרתיע - להפך, היא מעניקה לכם כוח לפעול בביטחון. במדריך שלנו תמצאו את הכלים
             המעשיים לעבוד עם AI בכל שלב מהמחקר: מתכנון ועד המלצות, תוך שמירה על אמינות, פרטיות והגינות.
           </p>
         </div>
