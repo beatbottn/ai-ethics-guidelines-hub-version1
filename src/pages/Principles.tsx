@@ -88,7 +88,7 @@ const Principles = () => {
         </div>
 
         {/* Two Side-by-Side Containers */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
           {/* Right Container - Poster */}
           <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-4 flex flex-col">
             <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
