@@ -8,6 +8,11 @@ const About = () => {
         {/* Header */}
         <div className="space-y-4">
           <h1 className="text-5xl font-bold text-foreground">אודות המדריך</h1>
+          <p className="text-lg text-foreground/90 leading-relaxed">
+            מדריך זה נועד לספק כלים מעשיים לחוקרות וחוקרי משתמשים, מעצבות ומעצבי UX ומנהלות ומנהלי צוותים לשימוש אתי
+            ואחראי בכלי AI בכל שלבי המחקר. המדריך מדגיש את החשיבות של שמירה על המצפן האתי תוך כדי ניצול היתרונות שמציעה
+            הטכנולוגיה.
+          </p>
         </div>
 
         {/* Methodology Section */}
@@ -19,16 +24,6 @@ const About = () => {
               הוגנת, אבטחה ופרטיות ושימוש אחראי ב-AI. שילבנו תובנות ממגוון מקורות מובילים, כגון: .
             </p>
           </div>
-        </div>
-
-        {/* Purpose Section */}
-        <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-6">
-          <h2 className="text-3xl font-bold text-foreground">מטרת המדריך</h2>
-          <p className="text-lg text-foreground/90 leading-relaxed">
-            מדריך זה נועד לספק כלים מעשיים לחוקרות וחוקרי משתמשים, מעצבות ומעצבי UX ומנהלות ומנהלי צוותים לשימוש אתי
-            ואחראי בכלי AI בכל שלבי המחקר. המדריך מדגיש את החשיבות של שמירה על המצפן האתי תוך כדי ניצול היתרונות שמציעה
-            הטכנולוגיה.
-          </p>
         </div>
 
         {/* Authors Section */}
