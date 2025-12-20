@@ -1,7 +1,6 @@
 import { Shield, Heart, Scale, User, ArrowLeft, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import sivanaPoster from "@/assets/sivana-poster.png";
 
 const principles = [
   {
@@ -91,18 +90,18 @@ const Principles = () => {
         {/* Two Side-by-Side Containers */}
         <div className="grid md:grid-cols-2 gap-8">
           {/* Right Container - Poster */}
-          <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-4">
+          <div className="card-elevated p-8 bg-primary/5 border-r-4 border-r-primary space-y-4 flex flex-col">
             <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
             <img 
-              src={sivanaPoster} 
+              src="/images/sivana-poster.png" 
               alt="פוסטר עקרונות אתיים למחקר משתמשים" 
-              className="w-full rounded-lg shadow-md"
+              className="w-48 rounded-lg shadow-md"
             />
             <p className="text-foreground/90 leading-relaxed text-lg">
               תרצו לשמור על העקרונות תמיד מול העיניים, וגם להתפנק במשהו יפה למשרד?
             </p>
             <a 
-              href={sivanaPoster} 
+              href="/images/sivana-poster.png" 
               download="ethical-principles-poster.png"
               className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
             >
@@ -122,7 +121,7 @@ const Principles = () => {
             </p>
             <div className="mt-auto pt-4">
               <Button asChild size="lg" className="gap-2">
-                <Link to="/research-phases">
+                <Link to="/phases">
                   התחילו במדריך המעשי
                   <ArrowLeft className="h-5 w-5" />
                 </Link>
