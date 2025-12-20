@@ -1,10 +1,8 @@
-import { AlertTriangle, TrendingDown, Lock, Brain, ShieldAlert } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const challenges = [
   {
     id: "bias",
-    icon: TrendingDown,
     title: "הטיה אלגוריתמית",
     titleEn: "Algorithmic Bias",
     description:
@@ -19,12 +17,9 @@ const challenges = [
     ],
     uxContext:
       "כאשר משתמשים ב-AI לסיכום ראיונות, קידוד תמות, או ניתוח סנטימנט - המודל עלול להעצים הטיות קיימות בנתונים ולהדיר קולות של קבוצות מוחלשות או מיעוט. לדוגמה: אם רוב המשתתפים במחקר היו בעלי פרופיל דמוגרפי דומה, ה-AI עלול להדיר או לפספס חוויות ייחודיות של משתמשים מרקע שונה.",
-    color: "from-orange-500 to-orange-600",
-    bgColor: "bg-orange-50 dark:bg-orange-950/20",
   },
   {
     id: "hallucinations",
-    icon: AlertTriangle,
     title: '"הזיות"',
     titleEn: "Hallucinations",
     description:
@@ -37,12 +32,9 @@ const challenges = [
     ],
     uxContext:
       'כאשר משתמשים ב-AI לסיכום ראיונות או יצירת מסעות משתמש, המודל עלול "למלא חסרים" בנתונים - לייחס ציטוטים שמשתתפים לא אמרו, ליצור "נקודות כאב" שלא עלו במחקר, או להמציא סטטיסטיקות תומכות. זה עלול להוביל להחלטות עיצוב מבוססות על נתונים פיקטיביים.',
-    color: "from-red-500 to-red-600",
-    bgColor: "bg-red-50 dark:bg-red-950/20",
   },
   {
     id: "blackbox",
-    icon: Lock,
     title: "עמימות וקושי בהסברתיות",
     titleEn: "Black Box",
     description:
@@ -54,12 +46,9 @@ const challenges = [
     ],
     uxContext:
       'כאשר משתמשים ב-AI לקידוד פתוח, זיהוי דפוסים, או אשכול תמות - אם הכלי לא מספק הסבר ברור (Explainability) למה הוא הציע קוד מסוים או חיבר תמות מסוימות, אנו מאבדים את היכולת לאמת את התהליך. זה פוגע באמינות המחקר ומקשה על זיהוי הטיות נסתרות או תופעות של "שטיפת ממוצעים" (Average Washing).',
-    color: "from-gray-500 to-gray-600",
-    bgColor: "bg-gray-50 dark:bg-gray-950/20",
   },
   {
     id: "security",
-    icon: ShieldAlert,
     title: "סיכוני אבטחה ובטיחות",
     titleEn: "Security & Safety Risks",
     description:
@@ -71,12 +60,9 @@ const challenges = [
     ],
     uxContext:
       "כאשר חוקרי UX משתמשים בכלים חיצוניים (כמו גרסאות חינמיות של ChatGPT או Gemini) כדי לתמלל ראיונות, לסכם נתונים, או לנתח תמות - יש סיכון שייחשף בטעות מידע מזהה של משתתפים, תובנות עסקיות רגישות, או נתונים קנייניים. זה מהווה הפרה של הסכמה מדעת, חוזים עם לקוחות, ותקנות פרטיות (כמו GDPR).",
-    color: "from-teal-500 to-teal-600",
-    bgColor: "bg-teal-50 dark:bg-teal-950/20",
   },
   {
     id: "judgment",
-    icon: Brain,
     title: "החלשת השיפוט האנושי ופגיעה באיכות המחקר",
     titleEn: "Impact on Human Judgment",
     description:
@@ -89,8 +75,6 @@ const challenges = [
     ],
     uxContext:
       "כאשר חוקרים מסתמכים על AI למשימות הדורשות פרספקטיבה, חשיבה וביקורת אנושית - הם עלולים לאבד את האינטואיציה המחקרית. הסתמכות יתר עלולה להוביל ליצירת תובנות גנריות, להחמיץ חוויות ייחודיות, ולפגוע ביכולת לזהות סתירות או דפוסים חריגים שדורשים חשיבה מקורית.",
-    color: "from-indigo-500 to-indigo-600",
-    bgColor: "bg-indigo-50 dark:bg-indigo-950/20",
   },
 ];
 
@@ -113,64 +97,57 @@ const Challenges = () => {
 
         {/* Challenges List */}
         <div className="space-y-6">
-          {challenges.map((challenge) => {
-            const Icon = challenge.icon;
-            return (
-              <div key={challenge.id} className="card-elevated">
-                <Accordion type="single" collapsible>
-                  <AccordionItem value={challenge.id} className="border-none">
-                    <AccordionTrigger className="px-8 py-6 hover:no-underline">
-                      <div className="flex items-start gap-4 text-right w-full">
-                        <div className={`p-3 rounded-lg bg-gradient-to-br ${challenge.color} text-white flex-shrink-0`}>
-                          <Icon className="h-6 w-6" />
-                        </div>
-                        <div className="flex-1">
-                          <h2 className="text-2xl font-bold text-foreground">{challenge.title}</h2>
-                          <p className="text-lg text-muted-foreground mt-1">({challenge.titleEn})</p>
-                          <p className="text-base text-foreground/80 mt-2 leading-relaxed">
-                            {challenge.description}
-                          </p>
-                        </div>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent className="px-8 pb-6 space-y-6">
-                      {/* Real World Example */}
-                      <div className="bg-background/50 rounded-lg p-6 border border-border/50">
-                        <h3 className="text-lg font-bold text-foreground mb-3">דוגמא מהעולם האמיתי</h3>
-                        <p className="text-foreground/80 leading-relaxed">{challenge.realWorldExample}</p>
-                        
-                        {challenge.additionalExample && (
-                          <p className="text-foreground/80 leading-relaxed mt-4">{challenge.additionalExample}</p>
-                        )}
-                        
-                        {/* Links */}
-                        <div className="mt-4 flex flex-wrap gap-3">
-                          {challenge.links.map((link, index) => (
-                            <a
-                              key={index}
-                              href={link.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 text-sm text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
-                            >
-                              {link.text}
-                              <span className="text-xs">↗</span>
-                            </a>
-                          ))}
-                        </div>
-                      </div>
+          {challenges.map((challenge) => (
+            <div key={challenge.id} className="card-elevated">
+              <Accordion type="single" collapsible>
+                <AccordionItem value={challenge.id} className="border-none">
+                  <AccordionTrigger className="px-8 py-6 hover:no-underline">
+                    <div className="text-right w-full">
+                      <h2 className="text-2xl font-bold text-foreground">{challenge.title}</h2>
+                      <p className="text-lg text-muted-foreground mt-1">({challenge.titleEn})</p>
+                      <p className="text-base text-muted-foreground mt-2">
+                        {challenge.description}
+                      </p>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-8 pb-6 space-y-6">
+                    {/* Real World Example */}
+                    <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
+                      <h3 className="text-lg font-bold text-foreground mb-3">דוגמא מהעולם האמיתי</h3>
+                      <p className="text-foreground/80 leading-relaxed">{challenge.realWorldExample}</p>
                       
-                      {/* UX Context */}
-                      <div className="p-6 bg-primary/5 rounded-lg border-r-4 border-r-primary">
-                        <h3 className="text-lg font-bold text-foreground mb-3">בהקשר מחקר UX</h3>
-                        <p className="text-foreground/80 leading-relaxed">{challenge.uxContext}</p>
+                      {challenge.additionalExample && (
+                        <p className="text-foreground/80 leading-relaxed mt-4">{challenge.additionalExample}</p>
+                      )}
+                      
+                      {/* Links */}
+                      <div className="mt-4 space-y-2">
+                        {challenge.links.map((link, index) => (
+                          <a
+                            key={index}
+                            href={link.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-sm text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
+                          >
+                            {link.text} ↗
+                          </a>
+                        ))}
                       </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                </Accordion>
-              </div>
-            );
-          })}
+                    </div>
+                    
+                    {/* UX Context */}
+                    <div>
+                      <h3 className="text-lg font-bold text-foreground mb-3">בהקשר מחקר UX</h3>
+                      <p className="text-foreground/80 leading-relaxed pr-6 relative before:content-['•'] before:absolute before:right-0 before:text-primary before:font-bold">
+                        {challenge.uxContext}
+                      </p>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          ))}
         </div>
 
         {/* Call to Action */}
