@@ -28,9 +28,21 @@ const About = () => {
                 הוגנת, אבטחה ופרטיות ושימוש אחראי ב-AI. שילבנו תובנות ממגוון מקורות מובילים: מסגרות אתיות, רגולציה,
                 מתודולוגיות עיצוב ומחקרים אקדמיים.
               </p>
+            </div>
 
-              <CollapsibleContent className="space-y-6 pt-2">
-                {/* מסגרות אתיות */}
+            <CollapsibleTrigger
+              type="button"
+              className="p-1 hover:bg-muted rounded transition-colors self-center"
+              aria-label={isMethodologyOpen ? "סגור מקורות" : "פתח מקורות"}
+            >
+              <ChevronDown
+                className={`h-5 w-5 text-muted-foreground transition-transform ${isMethodologyOpen ? "rotate-180" : ""}`}
+              />
+            </CollapsibleTrigger>
+          </div>
+
+          <CollapsibleContent className="space-y-6 pt-6">
+            {/* מסגרות אתיות */}
             <div className="space-y-3">
               <h3 className="text-xl font-semibold text-foreground">
                 ✓ מסגרות אתיות מוכרות המתוות עקרונות אתיים אוניברסליים
@@ -230,16 +242,11 @@ const About = () => {
               </ul>
             </div>
 
-                <p className="text-lg leading-relaxed text-foreground/80 pt-4">
-                  ההמלצות מתמקדות בכלי AI מבוססי שיחה (LLMs) שבהם משתמשים חוקרי UX מדי יום, ומספקות הנחיות מעשיות ישימות לכל
-                  שלב במחקר.
-                </p>
-              </CollapsibleContent>
-            </div>
-            <CollapsibleTrigger className="p-1 hover:bg-muted rounded transition-colors self-center">
-              <ChevronDown className={`h-5 w-5 text-muted-foreground transition-transform ${isMethodologyOpen ? "rotate-180" : ""}`} />
-            </CollapsibleTrigger>
-          </div>
+            <p className="text-lg leading-relaxed text-foreground/80 pt-4">
+              ההמלצות מתמקדות בכלי AI מבוססי שיחה (LLMs) שבהם משתמשים חוקרי UX מדי יום, ומספקות הנחיות מעשיות ישימות לכל
+              שלב במחקר.
+            </p>
+          </CollapsibleContent>
         </Collapsible>
 
         {/* Authors Section */}
