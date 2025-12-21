@@ -96,13 +96,13 @@ const Analysis = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <div className="min-h-screen bg-background py-spacing-xl px-spacing-lg md:px-spacing-xl" dir="rtl" lang="he">
+      <div className="max-w-content-width mx-auto space-y-spacing-xl">
         {/* Header */}
-        <div className="space-y-4">
-          <h1 className="text-5xl font-bold text-foreground">🔍 שלב 3: ניתוח התוצאות</h1>
-          <div className="card-elevated p-8">
-            <p className="text-xl text-foreground/90 leading-relaxed">
+        <div className="space-y-spacing-md">
+          <h1 className="text-h1 font-bold text-foreground">🔍 שלב 3: ניתוח התוצאות</h1>
+          <div className="bg-card rounded-lg border border-border shadow-card p-spacing-lg">
+            <p className="text-body-lg text-text-secondary leading-relaxed">
               בשלב זה אנו מפיקים משמעות מתוך הנתונים שנאספו: תמלולים, תצפיות, תשובות כמותניות ואיכותניות.
               זהו שלב טעון מבחינה קוגניטיבית, שמחייב תשומת לב מיוחדת להטיות, לאובייקטיביות ולייצוג הוגן של כל המשתתפים.
               שימוש ב-AI מסייע לזהות דפוסים, לייעל קידוד, ולהציג נתונים באופן חזותי, אך מחייב בקרה אנושית לכל אורך הדרך.
@@ -111,30 +111,30 @@ const Analysis = () => {
         </div>
 
         {/* Tasks */}
-        <div className="space-y-6">
-          <h2 className="text-3xl font-bold text-primary">משימות נפוצות עם AI בשלב הניתוח</h2>
+        <div className="space-y-spacing-lg">
+          <h2 className="text-h2 font-bold text-primary">משימות נפוצות עם AI בשלב הניתוח</h2>
           {tasks.map((task) => (
-            <div key={task.id} className="card-elevated">
+            <div key={task.id} className="bg-card rounded-lg border border-border shadow-card">
               <Accordion type="single" collapsible>
                 <AccordionItem value={task.id} className="border-none">
-                  <AccordionTrigger className="px-8 py-6 hover:no-underline">
+                  <AccordionTrigger className="px-spacing-lg py-spacing-lg hover:no-underline">
                     <div className="text-right">
-                      <h2 className="text-2xl font-bold text-foreground">{task.title}</h2>
-                      <p className="text-lg text-muted-foreground mt-1">({task.titleEn})</p>
+                      <h2 className="text-h3 font-bold text-foreground">{task.title}</h2>
+                      <p className="text-body-lg text-text-muted mt-spacing-xs">({task.titleEn})</p>
                       {task.subtasks && (
-                        <p className="text-base text-muted-foreground mt-2">
+                        <p className="text-body text-text-muted mt-spacing-sm">
                           {task.subtasks.join(" • ")}
                         </p>
                       )}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-8 pb-6 space-y-6">
+                  <AccordionContent className="px-spacing-lg pb-spacing-lg space-y-spacing-lg">
                     {/* Principles */}
-                    <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
-                      <h3 className="text-lg font-bold text-foreground mb-3">עקרונות אתיים מהותיים</h3>
-                      <div className="flex flex-wrap gap-2">
+                    <div className="bg-primary/5 rounded-lg p-spacing-lg border-r-4 border-r-primary">
+                      <h3 className="text-body-lg font-bold text-foreground mb-spacing-sm">עקרונות אתיים מהותיים</h3>
+                      <div className="flex flex-wrap gap-spacing-xs">
                         {task.principles.split(", ").map((principle, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
+                          <Badge key={idx} variant="secondary" className="text-body-sm px-spacing-sm py-spacing-xs">
                             {principle}
                           </Badge>
                         ))}
@@ -143,10 +143,10 @@ const Analysis = () => {
 
                     {/* How to Act */}
                     <div>
-                      <h3 className="text-lg font-bold text-foreground mb-4">כיצד לפעול</h3>
-                      <ul className="space-y-4">
+                      <h3 className="text-body-lg font-bold text-foreground mb-spacing-md">כיצד לפעול</h3>
+                      <ul className="space-y-spacing-md">
                         {task.howToAct.map((action, index) => (
-                          <li key={index} className="text-foreground/90 leading-relaxed pr-6 relative before:content-['•'] before:absolute before:right-0 before:text-primary before:font-bold">
+                          <li key={index} className="text-text-secondary leading-relaxed pr-spacing-lg relative before:content-['•'] before:absolute before:right-0 before:text-primary before:font-bold">
                             {action}
                           </li>
                         ))}
