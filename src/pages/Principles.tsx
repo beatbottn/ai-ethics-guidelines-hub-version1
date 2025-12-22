@@ -64,9 +64,9 @@ const Principles = () => {
     <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
-        <div className="space-y-4">
+        <div className="space-y-4 text-center">
           <h1 className="text-5xl font-bold text-foreground">על מה חשוב לשמור?</h1>
-          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl">
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
             לכולנו יש מצפן מוסרי שמנחה אותנו לשמור על אנשים אחרים ועל עצמנו. כשאנחנו עובדים עם AI במחקר משתמשים, אותו
             מצפן הופך להיות קריטי עוד יותר. הנה ארבעה עקרונות אתיקה יסודיים שכדאי להכיר ולשמור עליהם - ההמלצות במדריך
             גובשו על בסיס העקרונות הללו:
