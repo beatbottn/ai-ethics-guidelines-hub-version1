@@ -31,18 +31,18 @@
     --primary-dark: 220 80% 30%;
 
     /* Secondary: Professional Gray */
-    --secondary: 230 100% 74%;
+    --secondary: 234 89.4737% 73.9216%;
     --secondary-foreground: 224 15% 29%;
 
     /* Muted: Subtle Backgrounds */
     --muted: 240 100% 98%;
-    --muted-foreground: 120 17% 60%;
+    --muted-foreground: 224 15% 45%;
 
     /* Accent: Highlight Color */
     --accent: 180 100% 92%;
     --accent-foreground: 224 15% 29%;
 
-    --destructive: 0 74% 42%;
+    --destructive: 0 78% 50%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 220 13% 91%;
