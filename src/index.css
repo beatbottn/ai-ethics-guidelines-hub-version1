@@ -165,6 +165,6 @@
   }
 
   .challenge-card {
-    @apply card-elevated p-6 border-l-4 border-l-destructive/50;
+    @apply card-elevated p-6 transition-all duration-300;
   }
 }

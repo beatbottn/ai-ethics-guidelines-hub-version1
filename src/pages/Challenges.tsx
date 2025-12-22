@@ -129,7 +129,7 @@ const Challenges = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-8 pb-6 space-y-6">
                     {/* Real World Example */}
-                    <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
+                    <div className="bg-primary/5 rounded-lg p-6">
                       <h3 className="text-lg font-bold text-foreground mb-3">דוגמא מהעולם האמיתי</h3>
                       <p className="text-foreground/80 leading-relaxed">{challenge.realWorldExample}</p>
 
@@ -168,7 +168,7 @@ const Challenges = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="card-elevated p-8 bg-destructive/5 border-r-4 border-r-destructive">
+        <div className="card-elevated p-8 bg-destructive/5">
           <h2 className="text-2xl font-bold text-foreground mb-4">ממודעות לפעולה</h2>
           <p className="text-foreground/90 leading-relaxed text-lg">
             מודעות לאתגרים האלה אינה אמורה להרתיע - להפך, היא מעניקה לכם כוח לפעול בביטחון. במדריך שלנו תמצאו את הכלים
