@@ -1,4 +1,3 @@
-import { Home, BookOpen, AlertTriangle, ClipboardList, Users } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import {
   Sidebar,
@@ -16,22 +15,31 @@ import {
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
 
+// Import custom icons
+import HomeIcon from "@/assets/icons/home.svg";
+import DangerIcon from "@/assets/icons/danger-triangle.svg";
+import CompassIcon from "@/assets/icons/compass.svg";
+import ChecklistIcon from "@/assets/icons/checklist.svg";
+import Phase1Icon from "@/assets/icons/phase1.svg";
+import Phase2Icon from "@/assets/icons/phase2.svg";
+import Phase3Icon from "@/assets/icons/phase3.svg";
+import Phase4Icon from "@/assets/icons/phase4.svg";
+
 const navigationItems = [
-  { title: "דף הבית", url: "/", icon: Home },
-  { title: "אתגרי AI", url: "/challenges", icon: AlertTriangle },
-  { title: "עקרונות אתיים", url: "/principles", icon: BookOpen },
+  { title: "דף הבית", url: "/", icon: HomeIcon },
+  { title: "אתגרי AI", url: "/challenges", icon: DangerIcon },
+  { title: "עקרונות אתיים", url: "/principles", icon: CompassIcon },
   {
     title: "שלבי המחקר",
     url: "/phases",
-    icon: ClipboardList,
+    icon: ChecklistIcon,
     subItems: [
-      { title: "שלב 1: תכנון והגדרת מטרות", url: "/phases/planning" },
-      { title: "שלב 2: איסוף נתונים", url: "/phases/data-collection" },
-      { title: "שלב 3: ניתוח התוצאות", url: "/phases/analysis" },
-      { title: "שלב 4: הצגת ממצאים", url: "/phases/presentation" },
+      { title: "שלב 1: תכנון והגדרת מטרות", url: "/phases/planning", icon: Phase1Icon },
+      { title: "שלב 2: איסוף נתונים", url: "/phases/data-collection", icon: Phase2Icon },
+      { title: "שלב 3: ניתוח התוצאות", url: "/phases/analysis", icon: Phase3Icon },
+      { title: "שלב 4: הצגת ממצאים", url: "/phases/presentation", icon: Phase4Icon },
     ],
   },
-  { title: "אודות", url: "/about", icon: Users },
 ];
 
 export function AppSidebar() {
@@ -63,7 +71,7 @@ export function AppSidebar() {
                           className="flex-1"
                         >
                           <Link to={item.url}>
-                            <item.icon className="ml-2 h-4 w-4" />
+                            <img src={item.icon} alt="" className="ml-2 h-4 w-4" />
                             {!isCollapsed && <span>{item.title}</span>}
                           </Link>
                         </SidebarMenuButton>
@@ -84,7 +92,8 @@ export function AppSidebar() {
                                   asChild
                                   isActive={isActive(subItem.url, true)}
                                 >
-                                  <Link to={subItem.url}>
+                                  <Link to={subItem.url} className="flex items-center gap-2">
+                                    <img src={subItem.icon} alt="" className="h-4 w-4" />
                                     <span>{subItem.title}</span>
                                   </Link>
                                 </SidebarMenuSubButton>
@@ -100,7 +109,7 @@ export function AppSidebar() {
                       isActive={isActive(item.url, item.url === "/")}
                     >
                       <Link to={item.url}>
-                        <item.icon className="ml-2 h-4 w-4" />
+                        <img src={item.icon} alt="" className="ml-2 h-4 w-4" />
                         {!isCollapsed && <span>{item.title}</span>}
                       </Link>
                     </SidebarMenuButton>
