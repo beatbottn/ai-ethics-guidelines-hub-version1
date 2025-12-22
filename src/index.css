@@ -198,6 +198,6 @@
   }
 
   .challenge-card {
-    @apply card-elevated p-6 transition-all duration-300;
+    @apply bg-destructive/10 border border-destructive/20 rounded-lg p-5 transition-all duration-300;
   }
 }

@@ -67,13 +67,13 @@ const Index = () => {
           <Link to="/challenges" className="group">
             <div className="challenge-card h-full flex flex-col">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-lg bg-destructive/10 text-destructive">
+                <div className="p-3 rounded-full bg-destructive/15 text-destructive">
                   <AlertTriangle className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-semibold">אתגרי AI</h3>
+                <h3 className="text-xl font-bold text-foreground">אתגרי AI</h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed flex-grow">
-                הסיכונים שחשוב להכיר: כאשר AI טועה, מטעה, או מחליש את המחקר{" "}
+              <p className="text-foreground leading-relaxed flex-grow">
+                הסיכונים שחשוב להכיר: כאשר AI טועה, מטעה, או מחליש את המחקר
               </p>
               <div className="mt-4 flex items-center text-destructive font-medium group-hover:gap-2 transition-all">
                 <span>קראו עוד</span>
