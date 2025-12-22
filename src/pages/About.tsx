@@ -290,11 +290,11 @@ const About = () => {
             <div className="space-y-3">
               <h3 className="text-2xl font-semibold text-foreground">נעמה שפירא</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                נעמה שפירא היא אשת חווית משתמש עם ניסיון של מעל ל-20 שנה במחקר, אפיון וגיבוש אסטרטגיה למוצרים מורכבים
-                בסביבות עתירות טכנולוגיה (למשל ב- Intel, Dropbox ו-Microsoft). הגישה של נעמה ל-UX נשענת על תואר שני
-                בפסיכולוגיה של האינטרנט, ניסיון רחב בעיצוב ומחקר, והבנה מעמיקה של אסטרטגיה עסקית. היא מתמחה ביישום פרקטי
-                של תובנות מחקר, שעוזרות להתוות את הדרך לעיצוב, טקטיקה ואסטרטגיה במוצרים חדשניים. כשהיא לא עושה UX, נעמה
-                מתנדבת במיזמים שמשפרים את העולם באמצעות טכנולוגיה מתקדמת.
+                אשת חווית משתמש עם ניסיון של מעל ל-20 שנה במחקר, אפיון וגיבוש אסטרטגיה למוצרים מורכבים בסביבות עתירות
+                טכנולוגיה (למשל ב- Intel, Dropbox ו-Microsoft). הגישה של נעמה ל-UX נשענת על תואר שני בפסיכולוגיה של
+                האינטרנט, ניסיון רחב בעיצוב ומחקר, והבנה מעמיקה של אסטרטגיה עסקית. היא מתמחה ביישום פרקטי של תובנות
+                מחקר, שעוזרות להתוות את הדרך לעיצוב, טקטיקה ואסטרטגיה במוצרים חדשניים. כשהיא לא עושה UX, נעמה מתנדבת
+                במיזמים שמשפרים את העולם באמצעות טכנולוגיה מתקדמת..
               </p>
               <Button variant="outline" className="gap-2" asChild>
                 <a href="https://www.linkedin.com/in/nshapi/" target="_blank" rel="noopener noreferrer">
@@ -310,7 +310,7 @@ const About = () => {
             <div className="flex items-center gap-3 text-muted-foreground">
               <Calendar className="h-5 w-5" />
               <span className="text-lg">
-                <span className="font-semibold">תאריך פרסום:</span> ספטמבר 2025
+                <span className="font-semibold">תאריך פרסום:</span> דצמבר 2025
               </span>
             </div>
           </div>
