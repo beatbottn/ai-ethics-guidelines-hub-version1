@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Database, BarChart3, Presentation, ArrowLeft } from "lucide-react";
+import { Target, Database, BarChart3, Presentation } from "lucide-react";
 
 const phases = [
   {
@@ -44,13 +44,6 @@ const phases = [
 const ResearchPhases = () => {
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
-      <Link 
-        to="/" 
-        className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
-      >
-        <ArrowLeft className="h-4 w-4" />
-        חזרה לדף הבית
-      </Link>
 
       <header className="mb-10">
         <h1 className="text-4xl font-bold mb-4 text-foreground">יישום מעשי בארבעת שלבי המחקר</h1>
