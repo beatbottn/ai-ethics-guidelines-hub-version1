@@ -1,11 +1,17 @@
-import { Shield, Heart, Scale, User, ArrowLeft, Download } from "lucide-react";
+import { ArrowLeft, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import {
+  AutonomyIcon,
+  NonMaleficenceIcon,
+  BeneficenceIcon,
+  JusticeIcon,
+} from "@/components/icons/NavIcons";
 
 const principles = [
   {
     id: "autonomy",
-    icon: User,
+    icon: AutonomyIcon,
     title: "אוטונומיה",
     titleEn: "Autonomy",
     definition:
@@ -13,10 +19,11 @@ const principles = [
     color: "from-blue-500 to-blue-600",
     bgColor: "bg-blue-50 dark:bg-blue-950/20",
     borderColor: "border-blue-200 dark:border-blue-800",
+    iconColor: "text-[#788EFF]",
   },
   {
     id: "nonmaleficence",
-    icon: Shield,
+    icon: NonMaleficenceIcon,
     title: "אי-גרימת נזק",
     titleEn: "Non-Maleficence",
     definition:
@@ -24,10 +31,11 @@ const principles = [
     color: "from-green-500 to-green-600",
     bgColor: "bg-green-50 dark:bg-green-950/20",
     borderColor: "border-green-200 dark:border-green-800",
+    iconColor: "text-[#4EC9EF]",
   },
   {
     id: "beneficence",
-    icon: Heart,
+    icon: BeneficenceIcon,
     title: "תרומה לרווחה",
     titleEn: "Beneficence",
     definition:
@@ -35,10 +43,11 @@ const principles = [
     color: "from-pink-500 to-pink-600",
     bgColor: "bg-pink-50 dark:bg-pink-950/20",
     borderColor: "border-pink-200 dark:border-pink-800",
+    iconColor: "text-[#05D9DA]",
   },
   {
     id: "justice",
-    icon: Scale,
+    icon: JusticeIcon,
     title: "הוגנות וצדק",
     titleEn: "Fairness & Justice",
     definition:
@@ -46,6 +55,7 @@ const principles = [
     color: "from-purple-500 to-purple-600",
     bgColor: "bg-purple-50 dark:bg-purple-950/20",
     borderColor: "border-purple-200 dark:border-purple-800",
+    iconColor: "text-[#D056CF]",
   },
 ];
 
@@ -73,8 +83,8 @@ const Principles = () => {
                 className={`card-elevated ${principle.bgColor} border-r-4 ${principle.borderColor} p-8 space-y-4 hover:shadow-[var(--shadow-strong)] transition-all duration-300`}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`p-4 rounded-lg bg-gradient-to-br ${principle.color} text-white`}>
-                    <Icon className="h-8 w-8" />
+                  <div className={`p-4 rounded-lg bg-white/80 dark:bg-black/20 ${principle.iconColor}`}>
+                    <Icon className="h-12 w-12" />
                   </div>
                   <div className="flex-1">
                     <h2 className="text-2xl font-bold text-foreground mb-1">{principle.title}</h2>

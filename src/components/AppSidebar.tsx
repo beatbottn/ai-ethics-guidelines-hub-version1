@@ -13,7 +13,6 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { ChevronDown } from "lucide-react";
 import {
   HomeIcon,
   DangerTriangleIcon,
@@ -24,6 +23,7 @@ import {
   Phase3Icon,
   Phase4Icon,
   UsersIcon,
+  ChevronDownIcon,
 } from "@/components/icons/NavIcons";
 
 const navigationItems = [
@@ -80,7 +80,7 @@ export function AppSidebar() {
                         {!isCollapsed && (
                           <CollapsibleTrigger asChild>
                             <button className="p-2 hover:bg-sidebar-accent/50 rounded-md">
-                              <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
+                              <ChevronDownIcon className="h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
                             </button>
                           </CollapsibleTrigger>
                         )}
