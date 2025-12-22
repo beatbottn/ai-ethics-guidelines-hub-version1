@@ -57,8 +57,8 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border min-w-[--sidebar-width]">
-      <SidebarContent>
+    <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border bg-muted/30">
+      <SidebarContent className="pt-4">
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
@@ -70,10 +70,10 @@ export function AppSidebar() {
                         <SidebarMenuButton
                           asChild
                           isActive={isActive(item.url)}
-                          className="flex-1"
+                          className="flex-1 h-12"
                         >
                           <Link to={item.url}>
-                            <item.icon className="ml-2 h-4 w-4" />
+                            <item.icon className="ml-2 h-6 w-6" />
                             {!isCollapsed && <span>{item.title}</span>}
                           </Link>
                         </SidebarMenuButton>
@@ -93,9 +93,10 @@ export function AppSidebar() {
                                 <SidebarMenuSubButton
                                   asChild
                                   isActive={isActive(subItem.url, true)}
+                                  className="h-10 px-3"
                                 >
                                   <Link to={subItem.url} className="flex items-center gap-2">
-                                    <subItem.icon className="h-4 w-4" />
+                                    <subItem.icon className="h-5 w-5" />
                                     <span>{subItem.title}</span>
                                   </Link>
                                 </SidebarMenuSubButton>
@@ -109,9 +110,10 @@ export function AppSidebar() {
                     <SidebarMenuButton
                       asChild
                       isActive={isActive(item.url, item.url === "/")}
+                      className="h-12"
                     >
                       <Link to={item.url}>
-                        <item.icon className="ml-2 h-4 w-4" />
+                        <item.icon className="ml-2 h-6 w-6" />
                         {!isCollapsed && <span>{item.title}</span>}
                       </Link>
                     </SidebarMenuButton>
