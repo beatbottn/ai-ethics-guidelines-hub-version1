@@ -46,9 +46,9 @@ const Index = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Ethical Principles Card */}
           <Link to="/principles" className="group">
-            <div className="principle-card h-full flex flex-col">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-lg bg-primary/10 text-primary">
+            <div className="bg-white border border-[#818df8] rounded-lg p-6 h-full flex flex-col">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 rounded-lg bg-[#D6FFFF] text-[#3f4555]">
                   <BookOpen className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold">על מה חשוב שנשמור?</h3>
@@ -65,17 +65,17 @@ const Index = () => {
 
           {/* AI Challenges Card */}
           <Link to="/challenges" className="group">
-            <div className="challenge-card h-full flex flex-col">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-full bg-destructive/15 text-destructive">
+            <div className="bg-white border border-[#818df8] rounded-lg p-6 h-full flex flex-col">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 rounded-lg bg-[#D6FFFF] text-[#3f4555]">
                   <AlertTriangle className="h-6 w-6" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground">אתגרי AI</h3>
+                <h3 className="text-xl font-semibold">אתגרי AI</h3>
               </div>
-              <p className="text-foreground leading-relaxed flex-grow">
+              <p className="text-muted-foreground leading-relaxed flex-grow">
                 הסיכונים שחשוב להכיר: כאשר AI טועה, מטעה, או מחליש את המחקר
               </p>
-              <div className="mt-4 flex items-center text-destructive font-medium group-hover:gap-2 transition-all">
+              <div className="mt-4 flex items-center text-primary font-medium group-hover:gap-2 transition-all">
                 <span>קראו עוד</span>
                 <ArrowLeft className="h-4 w-4" />
               </div>
@@ -84,9 +84,9 @@ const Index = () => {
 
           {/* Research Phases Card */}
           <Link to="/phases/planning" className="group">
-            <div className="principle-card h-full flex flex-col">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-lg bg-accent/10 text-accent">
+            <div className="bg-white border border-[#818df8] rounded-lg p-6 h-full flex flex-col">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 rounded-lg bg-[#D6FFFF] text-[#3f4555]">
                   <ClipboardList className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold">המדריך לפי שלבים</h3>
@@ -94,7 +94,7 @@ const Index = () => {
               <p className="text-muted-foreground leading-relaxed flex-grow">
                 מתכנון מחקר ועד הצגת המלצות: איך לעבוד עם AI בצורה אחראית בכל שלב
               </p>
-              <div className="mt-4 flex items-center text-accent font-medium group-hover:gap-2 transition-all">
+              <div className="mt-4 flex items-center text-primary font-medium group-hover:gap-2 transition-all">
                 <span>התחילו כאן</span>
                 <ArrowLeft className="h-4 w-4" />
               </div>
