@@ -79,7 +79,7 @@ const Presentation = () => {
                   </AccordionTrigger>
                   <AccordionContent className="px-8 pb-6 space-y-6">
                     {/* Principles */}
-                    <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
+                    <div className="bg-primary/5 rounded-lg p-6">
                       <h3 className="text-lg font-bold text-foreground mb-3">עקרונות אתיים מהותיים</h3>
                       <div className="flex flex-wrap gap-2">
                         {task.principles.split(", ").map((principle, idx) => (
