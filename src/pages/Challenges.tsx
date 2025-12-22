@@ -99,13 +99,13 @@ const challenges = [
 
 const Challenges = () => {
   return (
-    <div className="min-h-screen bg-background py-32 px-24 lg:px-64" dir="rtl" lang="he">
-      <div className="max-w-page mx-auto space-y-32">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
+      <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
-        <div className="space-y-16">
-          <h1 className="text-h1 text-foreground">אתגרי AI: מה חשוב להכיר כאשר טעויות גורמות לנזק אמיתי</h1>
-          <div className="card-elevated p-24">
-            <p className="text-body text-foreground/90 leading-relaxed">
+        <div className="space-y-4">
+          <h1 className="text-5xl font-bold text-foreground">אתגרי AI: מה חשוב להכיר כאשר טעויות גורמות לנזק אמיתי</h1>
+          <div className="card-elevated p-8">
+            <p className="text-xl text-foreground/90 leading-relaxed">
               כלי AI מציעים יתרונות רבים למחקר משתמשים, אבל הם גם מסתירים סיכונים אמיתיים. כאשר AI טועה במחקר, ההשלכות
               לא נשארות על הנייר - הן יכולות להוביל להחלטות עיצוב שפוגעות בבריאות אנשים, מפספסות קבוצות פגיעות, או
               מעמיקות אי-שוויון חברתי. להלן חמישה סיכונים מרכזיים שחשוב להכיר- כי ההשפעה שלהם על המשתמשים שלנו היא
@@ -115,37 +115,37 @@ const Challenges = () => {
         </div>
 
         {/* Challenges List */}
-        <div className="space-y-24">
+        <div className="space-y-6">
           {challenges.map((challenge) => (
             <div key={challenge.id} className="card-elevated">
               <Accordion type="single" collapsible>
                 <AccordionItem value={challenge.id} className="border-none">
-                  <AccordionTrigger className="px-24 py-24 hover:no-underline">
+                  <AccordionTrigger className="px-8 py-6 hover:no-underline">
                     <div className="text-right w-full">
-                      <h2 className="text-h2 text-foreground">{challenge.title}</h2>
-                      <p className="text-body text-muted-foreground mt-4">({challenge.titleEn})</p>
-                      <p className="text-body text-muted-foreground mt-8">{challenge.description}</p>
+                      <h2 className="text-2xl font-bold text-foreground">{challenge.title}</h2>
+                      <p className="text-lg text-muted-foreground mt-1">({challenge.titleEn})</p>
+                      <p className="text-base text-muted-foreground mt-2">{challenge.description}</p>
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-24 pb-24 space-y-24 bg-section-background">
+                  <AccordionContent className="px-8 pb-6 space-y-6">
                     {/* Real World Example */}
-                    <div className="bg-primary/5 rounded-card p-24 border-r-4 border-r-primary">
-                      <h3 className="text-h3 text-foreground mb-12">דוגמא מהעולם האמיתי</h3>
-                      <p className="text-foreground/80 leading-relaxed text-body">{challenge.realWorldExample}</p>
+                    <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
+                      <h3 className="text-lg font-bold text-foreground mb-3">דוגמא מהעולם האמיתי</h3>
+                      <p className="text-foreground/80 leading-relaxed">{challenge.realWorldExample}</p>
 
                       {challenge.additionalExample && (
-                        <p className="text-foreground/80 leading-relaxed text-body mt-16">{challenge.additionalExample}</p>
+                        <p className="text-foreground/80 leading-relaxed mt-4">{challenge.additionalExample}</p>
                       )}
 
                       {/* Links */}
-                      <div className="mt-16 space-y-8">
+                      <div className="mt-4 space-y-2">
                         {challenge.links.map((link, index) => (
                           <a
                             key={index}
                             href={link.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="block text-caption text-primary hover:underline transition-colors"
+                            className="block text-sm text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
                           >
                             {link.text} ↗
                           </a>
@@ -155,8 +155,8 @@ const Challenges = () => {
 
                     {/* UX Context */}
                     <div>
-                      <h3 className="text-h3 text-foreground mb-12">בהקשר מחקר UX</h3>
-                      <p className="text-foreground/80 leading-relaxed text-body pr-24 relative before:content-['•'] before:absolute before:right-0 before:text-primary before:font-bold">
+                      <h3 className="text-lg font-bold text-foreground mb-3">בהקשר מחקר UX</h3>
+                      <p className="text-foreground/80 leading-relaxed pr-6 relative before:content-['•'] before:absolute before:right-0 before:text-primary before:font-bold">
                         {challenge.uxContext}
                       </p>
                     </div>
@@ -168,9 +168,9 @@ const Challenges = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="card-elevated p-24 bg-destructive/5 border-r-4 border-r-destructive">
-          <h2 className="text-h2 text-foreground mb-16">ממודעות לפעולה</h2>
-          <p className="text-foreground/90 leading-relaxed text-body">
+        <div className="card-elevated p-8 bg-destructive/5 border-r-4 border-r-destructive">
+          <h2 className="text-2xl font-bold text-foreground mb-4">ממודעות לפעולה</h2>
+          <p className="text-foreground/90 leading-relaxed text-lg">
             מודעות לאתגרים האלה אינה אמורה להרתיע - להפך, היא מעניקה לכם כוח לפעול בביטחון. במדריך שלנו תמצאו את הכלים
             המעשיים לעבוד עם AI בכל שלב מהמחקר: מתכנון ועד המלצות, תוך שמירה על אמינות, פרטיות והגינות.
           </p>

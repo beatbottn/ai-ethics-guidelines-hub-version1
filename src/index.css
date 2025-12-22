@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,84 +10,65 @@
   direction: rtl;
 }
 
-/* Definition of the design system - AI Ethics Guidelines Style Guide */
+/* Definition of the design system - Professional Academic Theme */
 @layer base {
   :root {
-    /* Primary: Main actions, buttons, links */
-    --primary: 238 87% 65%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 229 100% 77%;
+    /* Deep Professional Blues - Academic Trust */
+    --background: 210 20% 98%;
+    --foreground: 220 40% 10%;
 
-    /* Secondary/Accent: Highlights */
-    --secondary: 186 84% 55%;
-    --secondary-foreground: 220 40% 15%;
-
-    /* Text colors */
-    --foreground: 223 19% 29%;
-    
-    /* Background colors */
-    --background: 240 20% 99%;
-    --section-background: 207 55% 96%;
-
-    /* Card styling */
     --card: 0 0% 100%;
-    --card-foreground: 223 19% 29%;
+    --card-foreground: 220 40% 10%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 223 19% 29%;
+    --popover-foreground: 220 40% 10%;
+
+    /* Primary: Deep Academic Blue */
+    --primary: 220 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 220 60% 60%;
+    --primary-dark: 220 80% 30%;
+
+    /* Secondary: Professional Gray */
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 40% 15%;
 
     /* Muted: Subtle Backgrounds */
-    --muted: 207 55% 96%;
-    --muted-foreground: 223 19% 45%;
+    --muted: 220 20% 96%;
+    --muted-foreground: 220 20% 45%;
 
-    /* Accent colors */
-    --accent: 195 87% 62%;
-    --accent-foreground: 220 40% 15%;
+    /* Accent: Highlight Color */
+    --accent: 200 80% 50%;
+    --accent-foreground: 0 0% 100%;
 
-    /* Ethics/Values color */
-    --ethics: 301 49% 57%;
-    --ethics-foreground: 0 0% 100%;
-
-    /* Success color */
-    --success: 180 99% 42%;
-    --success-foreground: 0 0% 100%;
-
-    /* Error/Destructive */
-    --destructive: 0 84% 60%;
+    --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
-    --destructive-dark: 0 63% 41%;
 
-    /* Border and input */
     --border: 220 20% 88%;
     --input: 220 20% 88%;
-    --ring: 238 87% 65%;
+    --ring: 220 70% 45%;
 
-    /* Border radius tokens */
     --radius: 0.5rem;
-    --radius-sm: 0.375rem;
-    --radius-lg: 0.5rem;
-    --radius-button: 0.375rem;
-    --radius-card: 0.5rem;
-    --radius-input: 0.375rem;
 
-    /* Sidebar Colors - Light background for right sidebar */
-    --sidebar-background: 207 55% 96%;
-    --sidebar-foreground: 223 19% 29%;
-    --sidebar-primary: 238 87% 65%;
+    /* Sidebar Colors */
+    --sidebar-background: 220 40% 15%;
+    --sidebar-foreground: 220 15% 95%;
+    --sidebar-primary: 220 70% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 238 87% 65%;
-    --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 220 20% 88%;
-    --sidebar-ring: 238 87% 65%;
-    --sidebar-width: 260px;
+    --sidebar-accent: 220 40% 20%;
+    --sidebar-accent-foreground: 220 15% 95%;
+    --sidebar-border: 220 40% 25%;
+    --sidebar-ring: 220 70% 55%;
 
     /* Professional Shadows */
     --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-medium: 0 4px 16px rgba(0, 0, 0, 0.12);
     --shadow-strong: 0 8px 24px rgba(0, 0, 0, 0.16);
 
-    /* Font */
-    --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif;
+    /* Professional Gradients */
+    --gradient-header: linear-gradient(135deg, hsl(220, 70%, 45%) 0%, hsl(220, 80%, 35%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(220, 20%, 98%) 100%);
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
   .dark {
@@ -97,17 +81,18 @@
     --popover: 220 40% 12%;
     --popover-foreground: 220 15% 95%;
 
-    --primary: 238 87% 65%;
-    --primary-foreground: 0 0% 100%;
-    --primary-hover: 229 100% 77%;
+    --primary: 220 70% 55%;
+    --primary-foreground: 220 40% 5%;
+    --primary-light: 220 60% 65%;
+    --primary-dark: 220 80% 40%;
 
-    --secondary: 186 84% 55%;
-    --secondary-foreground: 220 40% 5%;
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 220 15% 95%;
 
     --muted: 220 30% 16%;
     --muted-foreground: 220 15% 65%;
 
-    --accent: 195 87% 62%;
+    --accent: 200 80% 55%;
     --accent-foreground: 220 40% 5%;
 
     --destructive: 0 70% 55%;
@@ -115,18 +100,17 @@
 
     --border: 220 30% 22%;
     --input: 220 30% 22%;
-    --ring: 238 87% 65%;
+    --ring: 220 70% 55%;
 
     --sidebar-background: 220 40% 10%;
     --sidebar-foreground: 220 15% 90%;
-    --sidebar-primary: 238 87% 65%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 220 70% 60%;
+    --sidebar-primary-foreground: 220 40% 5%;
     --sidebar-accent: 220 40% 15%;
     --sidebar-accent-foreground: 220 15% 90%;
     --sidebar-border: 220 40% 18%;
-    --sidebar-ring: 238 87% 65%;
-
-    --font-sans: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif;
+    --sidebar-ring: 220 70% 60%;
+    --font-sans: Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 }
 
@@ -143,36 +127,30 @@
     @apply bg-background text-foreground font-sans antialiased;
   }
 
-  /* Hebrew/RTL Typography - Open Sans */
+  /* Hebrew Typography */
   [lang="he"], [dir="rtl"] {
-    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Arial', 'Helvetica Neue', sans-serif;
   }
 
-  /* Typography Scale per Style Guide */
+  /* Semantic HTML improvements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+
   h1 {
-    @apply text-[32px] font-semibold tracking-tight;
+    @apply text-4xl md:text-5xl;
   }
 
   h2 {
-    @apply text-[24px] font-semibold tracking-tight;
+    @apply text-3xl md:text-4xl;
   }
 
   h3 {
-    @apply text-[18px] font-semibold tracking-tight;
+    @apply text-2xl md:text-3xl;
   }
 
   p {
     @apply text-base leading-relaxed;
-  }
-
-  /* Caption text */
-  .caption {
-    @apply text-[13px] text-muted-foreground;
-  }
-
-  /* Link styles - no underline by default, underline on hover */
-  a {
-    @apply text-primary no-underline hover:underline transition-all;
   }
 }
 
@@ -187,33 +165,6 @@
   }
 
   .challenge-card {
-    @apply card-elevated p-6 border-r-4 border-r-destructive/50;
-  }
-
-  /* Tag/Chip styles */
-  .tag-info {
-    @apply bg-accent text-accent-foreground px-3 py-1 rounded-full text-sm;
-  }
-
-  .tag-success {
-    @apply bg-success text-success-foreground px-3 py-1 rounded-full text-sm;
-  }
-
-  .tag-ethics {
-    @apply bg-ethics text-ethics-foreground px-3 py-1 rounded-full text-sm;
-  }
-
-  .tag-error {
-    @apply bg-destructive-dark text-destructive-foreground px-3 py-1 rounded-full text-sm;
-  }
-
-  /* Accordion body background */
-  .accordion-content {
-    @apply bg-section-background;
-  }
-
-  /* Focus states for accessibility */
-  .focus-ring {
-    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2;
+    @apply card-elevated p-6 border-l-4 border-l-destructive/50;
   }
 }

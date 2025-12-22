@@ -107,13 +107,13 @@ const DataCollection = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background py-spacing-xl px-spacing-lg md:px-spacing-xl" dir="rtl" lang="he">
-      <div className="max-w-content-width mx-auto space-y-spacing-xl">
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
+      <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
-        <div className="space-y-spacing-md">
-          <h1 className="text-h1 font-bold text-foreground">🔍 שלב 2: איסוף נתונים</h1>
-          <div className="bg-card rounded-lg border border-border shadow-card p-spacing-lg">
-            <p className="text-body-lg text-text-secondary leading-relaxed">
+        <div className="space-y-4">
+          <h1 className="text-5xl font-bold text-foreground">🔍 שלב 2: איסוף נתונים</h1>
+          <div className="card-elevated p-8">
+            <p className="text-xl text-foreground/90 leading-relaxed">
               בשלב זה אנחנו אוספים את המידע הנדרש למחקר באמצעים שונים: ראיונות, שאלונים, תצפיות, ומבדקי שמישות. 
               זהו שלב עדין וקריטי מבחינת מהימנות הנתונים והאופן שבו אנו מייצגים את קולות המשתמשים.
               שילוב AI בשלב זה נועד להאיץ תהליכים, לחדד שאלות, ולתמוך באיסוף שיטתי, תוך שמירה על אמפתיה, שקיפות ופרטיות.
@@ -122,19 +122,19 @@ const DataCollection = () => {
         </div>
 
         {/* Guiding Principles */}
-        <div className="bg-card rounded-lg border border-border shadow-card p-spacing-lg space-y-spacing-lg">
-          <div className="flex items-center gap-spacing-sm">
-            <span className="text-h2">✨</span>
-            <h2 className="text-h2 font-bold text-foreground">עקרונות מנחים לשלב זה</h2>
+        <div className="card-elevated p-8 space-y-6">
+          <div className="flex items-center gap-3">
+            <span className="text-3xl">✨</span>
+            <h2 className="text-3xl font-bold text-foreground">עקרונות מנחים לשלב זה</h2>
           </div>
-          <p className="text-body-lg text-text-secondary leading-relaxed">
+          <p className="text-lg text-foreground/90 leading-relaxed">
             שלב איסוף הנתונים הוא השלב שבו אנחנו באים במגע ישיר עם משתמשים אמיתיים, ולכן האחריות האתית שלנו כאן מוגברת.
           </p>
-          <div className="space-y-spacing-sm">
+          <div className="space-y-3">
             <p className="font-semibold text-foreground">האחריות שלנו כחוקרות וחוקרי חווית משתמשים בשלב זה:</p>
-            <ul className="space-y-spacing-xs">
+            <ul className="space-y-2">
               {guidelines.map((guideline, index) => (
-                <li key={index} className="text-text-secondary leading-relaxed pr-spacing-lg relative before:content-['✓'] before:absolute before:right-0 before:text-primary before:font-bold">
+                <li key={index} className="text-foreground/90 leading-relaxed pr-6 relative before:content-['✓'] before:absolute before:right-0 before:text-primary before:font-bold">
                   {guideline}
                 </li>
               ))}
@@ -143,45 +143,45 @@ const DataCollection = () => {
         </div>
 
         {/* Tasks */}
-        <div className="space-y-spacing-lg">
-          <h2 className="text-h2 font-bold text-primary">משימות נפוצות עם AI בשלב איסוף הנתונים</h2>
+        <div className="space-y-6">
+          <h2 className="text-3xl font-bold text-primary">משימות נפוצות עם AI בשלב איסוף הנתונים</h2>
           {tasks.map((task) => (
-            <div key={task.id} className="bg-card rounded-lg border border-border shadow-card">
+            <div key={task.id} className="card-elevated">
               <Accordion type="single" collapsible>
                 <AccordionItem value={task.id} className="border-none">
-                  <AccordionTrigger className="px-spacing-lg py-spacing-lg hover:no-underline">
+                  <AccordionTrigger className="px-8 py-6 hover:no-underline">
                     <div className="text-right">
-                      <h2 className="text-h3 font-bold text-foreground">{task.title}</h2>
-                      <p className="text-body-lg text-text-muted mt-spacing-xs">({task.titleEn})</p>
+                      <h2 className="text-2xl font-bold text-foreground">{task.title}</h2>
+                      <p className="text-lg text-muted-foreground mt-1">({task.titleEn})</p>
                       {task.subtasks && (
-                        <p className="text-body text-text-muted mt-spacing-sm">
+                        <p className="text-base text-muted-foreground mt-2">
                           {task.subtasks.join(" • ")}
                         </p>
                       )}
                     </div>
                   </AccordionTrigger>
-                  <AccordionContent className="px-spacing-lg pb-spacing-lg space-y-spacing-lg">
+                  <AccordionContent className="px-8 pb-6 space-y-6">
                     {/* Context */}
                     {task.context && (
-                      <div className="bg-muted rounded-lg p-spacing-lg">
-                        <p className="text-text-secondary leading-relaxed">{task.context}</p>
+                      <div className="bg-muted/30 rounded-lg p-6">
+                        <p className="text-foreground/90 leading-relaxed">{task.context}</p>
                       </div>
                     )}
 
                     {/* Question */}
                     {task.question && (
-                      <div className="bg-accent-warning/10 rounded-lg p-spacing-lg border-r-4 border-r-accent-warning">
-                        <p className="font-semibold text-foreground mb-spacing-xs">שאלו את עצמכם:</p>
-                        <p className="text-text-secondary leading-relaxed">{task.question}</p>
+                      <div className="bg-amber-50 dark:bg-amber-950/20 rounded-lg p-6 border-r-4 border-r-amber-500">
+                        <p className="font-semibold text-foreground mb-2">שאלו את עצמכם:</p>
+                        <p className="text-foreground/90 leading-relaxed">{task.question}</p>
                       </div>
                     )}
 
                     {/* Principles */}
-                    <div className="bg-primary/5 rounded-lg p-spacing-lg border-r-4 border-r-primary">
-                      <h3 className="text-body-lg font-bold text-foreground mb-spacing-sm">עקרונות אתיים מהותיים</h3>
-                      <div className="flex flex-wrap gap-spacing-xs">
+                    <div className="bg-primary/5 rounded-lg p-6 border-r-4 border-r-primary">
+                      <h3 className="text-lg font-bold text-foreground mb-3">עקרונות אתיים מהותיים</h3>
+                      <div className="flex flex-wrap gap-2">
                         {task.principles.split(", ").map((principle, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-body-sm px-spacing-sm py-spacing-xs">
+                          <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
                             {principle}
                           </Badge>
                         ))}
@@ -190,16 +190,16 @@ const DataCollection = () => {
 
                     {/* How to Act */}
                     <div>
-                      <h3 className="text-body-lg font-bold text-foreground mb-spacing-md">פעולות מעשיות</h3>
-                      <div className="space-y-spacing-md">
+                      <h3 className="text-lg font-bold text-foreground mb-4">פעולות מעשיות</h3>
+                      <div className="space-y-4">
                         {task.howToAct.map((action, index) => (
-                          <div key={index} className="bg-muted/50 p-spacing-md rounded-lg space-y-spacing-sm">
+                          <div key={index} className="bg-muted/50 p-5 rounded-lg space-y-3">
                             <p className="font-semibold text-foreground">{index + 1}. {action.title}</p>
-                            <p className="text-text-secondary leading-relaxed">{action.content}</p>
+                            <p className="text-foreground/90 leading-relaxed">{action.content}</p>
                             {action.prompt && (
-                              <div className="bg-background p-spacing-md rounded-lg border-r-2 border-r-primary/50">
-                                <p className="text-body-sm text-text-muted mb-spacing-xs">פרומפט לדוגמה:</p>
-                                <p className="text-text-secondary font-mono text-body-sm">{action.prompt}</p>
+                              <div className="bg-background/80 p-4 rounded border-r-2 border-r-primary/50">
+                                <p className="text-sm text-muted-foreground mb-1">פרומפט לדוגמה:</p>
+                                <p className="text-foreground/90 font-mono text-sm">{action.prompt}</p>
                               </div>
                             )}
                           </div>

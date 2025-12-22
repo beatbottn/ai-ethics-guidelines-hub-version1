@@ -47,15 +47,11 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar 
-      side="right" 
-      dir="rtl" 
-      className="border-r-0 border-l border-sidebar-border bg-sidebar"
-    >
-      <SidebarContent className="p-24">
+    <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border min-w-[--sidebar-width]">
+      <SidebarContent>
         <SidebarGroup>
           <SidebarGroupContent>
-            <SidebarMenu className="gap-8">
+            <SidebarMenu>
               {navigationItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   {item.subItems ? (
@@ -64,16 +60,16 @@ export function AppSidebar() {
                         <SidebarMenuButton
                           asChild
                           isActive={isActive(item.url)}
-                          className="flex-1 min-h-[48px] hover:bg-primary/10 data-[active=true]:bg-primary/15 data-[active=true]:text-primary rounded-button"
+                          className="flex-1"
                         >
                           <Link to={item.url}>
-                            <item.icon className="ml-8 h-4 w-4" />
+                            <item.icon className="ml-2 h-4 w-4" />
                             {!isCollapsed && <span>{item.title}</span>}
                           </Link>
                         </SidebarMenuButton>
                         {!isCollapsed && (
                           <CollapsibleTrigger asChild>
-                            <button className="p-8 hover:bg-primary/10 rounded-button ml-8">
+                            <button className="p-2 hover:bg-sidebar-accent/50 rounded-md">
                               <ChevronDown className="h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
                             </button>
                           </CollapsibleTrigger>
@@ -81,13 +77,12 @@ export function AppSidebar() {
                       </div>
                       {!isCollapsed && (
                         <CollapsibleContent>
-                          <SidebarMenuSub className="border-r-0 mr-0 pr-0 mt-8 space-y-4">
+                          <SidebarMenuSub className="border-r-0 mr-0 pr-0">
                             {item.subItems.map((subItem) => (
                               <SidebarMenuSubItem key={subItem.url}>
                                 <SidebarMenuSubButton
                                   asChild
                                   isActive={isActive(subItem.url, true)}
-                                  className="min-h-[48px] hover:bg-primary/10 data-[active=true]:bg-primary/15 data-[active=true]:text-primary rounded-button"
                                 >
                                   <Link to={subItem.url}>
                                     <span>{subItem.title}</span>
@@ -103,10 +98,9 @@ export function AppSidebar() {
                     <SidebarMenuButton
                       asChild
                       isActive={isActive(item.url, item.url === "/")}
-                      className="min-h-[48px] hover:bg-primary/10 data-[active=true]:bg-primary/15 data-[active=true]:text-primary rounded-button"
                     >
                       <Link to={item.url}>
-                        <item.icon className="ml-8 h-4 w-4" />
+                        <item.icon className="ml-2 h-4 w-4" />
                         {!isCollapsed && <span>{item.title}</span>}
                       </Link>
                     </SidebarMenuButton>
