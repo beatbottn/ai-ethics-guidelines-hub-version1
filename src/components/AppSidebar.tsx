@@ -14,20 +14,21 @@ import {
 } from "@/components/ui/sidebar";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { ChevronDown } from "lucide-react";
-
-// Import custom icons
-import HomeIcon from "@/assets/icons/home.svg";
-import DangerIcon from "@/assets/icons/danger-triangle.svg";
-import CompassIcon from "@/assets/icons/compass.svg";
-import ChecklistIcon from "@/assets/icons/checklist.svg";
-import Phase1Icon from "@/assets/icons/phase1.svg";
-import Phase2Icon from "@/assets/icons/phase2.svg";
-import Phase3Icon from "@/assets/icons/phase3.svg";
-import Phase4Icon from "@/assets/icons/phase4.svg";
+import {
+  HomeIcon,
+  DangerTriangleIcon,
+  CompassIcon,
+  ChecklistIcon,
+  Phase1Icon,
+  Phase2Icon,
+  Phase3Icon,
+  Phase4Icon,
+  UsersIcon,
+} from "@/components/icons/NavIcons";
 
 const navigationItems = [
   { title: "דף הבית", url: "/", icon: HomeIcon },
-  { title: "אתגרי AI", url: "/challenges", icon: DangerIcon },
+  { title: "אתגרי AI", url: "/challenges", icon: DangerTriangleIcon },
   { title: "עקרונות אתיים", url: "/principles", icon: CompassIcon },
   {
     title: "שלבי המחקר",
@@ -40,6 +41,7 @@ const navigationItems = [
       { title: "שלב 4: הצגת ממצאים", url: "/phases/presentation", icon: Phase4Icon },
     ],
   },
+  { title: "אודות", url: "/about", icon: UsersIcon },
 ];
 
 export function AppSidebar() {
@@ -71,7 +73,7 @@ export function AppSidebar() {
                           className="flex-1"
                         >
                           <Link to={item.url}>
-                            <img src={item.icon} alt="" className="ml-2 h-4 w-4" />
+                            <item.icon className="ml-2 h-4 w-4" />
                             {!isCollapsed && <span>{item.title}</span>}
                           </Link>
                         </SidebarMenuButton>
@@ -93,7 +95,7 @@ export function AppSidebar() {
                                   isActive={isActive(subItem.url, true)}
                                 >
                                   <Link to={subItem.url} className="flex items-center gap-2">
-                                    <img src={subItem.icon} alt="" className="h-4 w-4" />
+                                    <subItem.icon className="h-4 w-4" />
                                     <span>{subItem.title}</span>
                                   </Link>
                                 </SidebarMenuSubButton>
@@ -109,7 +111,7 @@ export function AppSidebar() {
                       isActive={isActive(item.url, item.url === "/")}
                     >
                       <Link to={item.url}>
-                        <img src={item.icon} alt="" className="ml-2 h-4 w-4" />
+                        <item.icon className="ml-2 h-4 w-4" />
                         {!isCollapsed && <span>{item.title}</span>}
                       </Link>
                     </SidebarMenuButton>
