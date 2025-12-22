@@ -57,9 +57,9 @@ export function AppSidebar() {
   };
 
   return (
-    <Sidebar side="right" dir="rtl" className="border-r-0 border-l border-sidebar-border bg-muted/30">
+    <Sidebar side="right" dir="rtl" className="border-r-0 border-s border-sidebar-border bg-sidebar">
       <SidebarContent className="pt-4">
-        <SidebarGroup>
+        <SidebarGroup className="p-0">
           <SidebarGroupContent>
             <SidebarMenu>
               {navigationItems.map((item) => (
@@ -87,13 +87,12 @@ export function AppSidebar() {
                       </div>
                       {!isCollapsed && (
                         <CollapsibleContent>
-                          <SidebarMenuSub className="border-r-0 mr-0 pr-0">
+                          <SidebarMenuSub className="border-e-0 me-0 pe-0">
                             {item.subItems.map((subItem) => (
                               <SidebarMenuSubItem key={subItem.url}>
                                 <SidebarMenuSubButton
                                   asChild
                                   isActive={isActive(subItem.url, true)}
-                                  className="h-10 px-3"
                                 >
                                   <Link to={subItem.url} className="flex items-center gap-2">
                                     <subItem.icon className="h-5 w-5" />
