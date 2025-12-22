@@ -120,19 +120,8 @@ const Principles = () => {
               <Button
                 type="button"
                 size="lg"
-                onClick={async () => {
-                  const res = await fetch(ethicsPoster);
-                  const blob = await res.blob();
-                  const url = URL.createObjectURL(blob);
-
-                  const link = document.createElement("a");
-                  link.href = url;
-                  link.download = "ethical-principles-poster.png";
-                  document.body.appendChild(link);
-                  link.click();
-                  link.remove();
-
-                  URL.revokeObjectURL(url);
+                onClick={() => {
+                  window.open('https://drive.google.com/file/d/1pz5_uHE6fhjm9sXhWnvCHwcVeY9CfT9S/view?usp=sharing', '_blank');
                 }}
                 className="w-full gap-2"
               >
