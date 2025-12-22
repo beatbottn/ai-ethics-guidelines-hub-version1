@@ -1,16 +1,16 @@
 import { Link } from "react-router-dom";
 import { BookOpen, AlertTriangle, ClipboardList, ArrowLeft } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
       {/* Hero Section */}
-      <section className="py-16 px-6 md:px-12 max-w-6xl mx-auto">
+      <section className="pt-10 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="text-center space-y-6">
           <h1 className="text-4xl md:text-5xl text-foreground font-bold max-w-4xl mx-auto">
             שימוש אתי ב-AI במחקר משתמשים
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8 md:mb-10">
             מדריך ידע מעשי עם כלים והמלצות למשימות מחקריות - לכל מי שעוסקות ועוסקים בחווית משתמשים
           </p>
           <div className="pt-4 text-sm text-muted-foreground">
@@ -20,9 +20,9 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Introduction */}
-      <section className="py-12 px-6 md:px-12 max-w-5xl mx-auto">
-        <div className="card-elevated p-8 space-y-6">
+      {/* Introduction Card */}
+      <section className="pt-8 md:pt-10 px-6 md:px-12 max-w-5xl mx-auto">
+        <div className="card-elevated p-8 space-y-6 mb-10 md:mb-12">
           <h2 className="text-3xl font-bold text-foreground">AI במחקר: ההזדמנות והאחריות</h2>
           <div className="prose prose-lg max-w-none text-foreground/90 leading-relaxed space-y-4">
             <p>
@@ -42,8 +42,8 @@ const Index = () => {
       </section>
 
       {/* Quick Navigation Cards */}
-      <section className="py-12 px-6 md:px-12 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-6">
+      <section className="px-6 md:px-12 max-w-6xl mx-auto pb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {/* Ethical Principles Card */}
           <Link to="/principles" className="group">
             <div className="principle-card h-full flex flex-col">
@@ -102,8 +102,8 @@ const Index = () => {
           </Link>
         </div>
       </section>
-
     </div>
   );
 };
+
 export default Index;
