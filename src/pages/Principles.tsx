@@ -7,6 +7,7 @@ import {
   BeneficenceIcon,
   JusticeIcon,
 } from "@/components/icons/NavIcons";
+import ethicsPoster from "@/assets/ethics-poster.jpeg";
 
 const principles = [
   {
@@ -105,7 +106,7 @@ const Principles = () => {
               <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
               <div className="flex gap-6 items-start">
                 <img
-                  src="/images/sivana-poster.png"
+                  src={ethicsPoster}
                   alt="פוסטר עקרונות אתיים למחקר משתמשים"
                   className="w-48 rounded-lg shadow-md flex-shrink-0"
                 />
@@ -120,7 +121,7 @@ const Principles = () => {
                 type="button"
                 size="lg"
                 onClick={async () => {
-                  const res = await fetch("/images/sivana-poster.png");
+                  const res = await fetch(ethicsPoster);
                   const blob = await res.blob();
                   const url = URL.createObjectURL(blob);
 
