@@ -9,9 +9,9 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Header */}
-        <div className="space-y-4">
+        <div className="space-y-4 text-center">
           <h1 className="text-5xl font-bold text-foreground">אודות המדריך</h1>
-          <p className="text-lg text-foreground/90 leading-relaxed">
+          <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
             מדריך זה נועד לספק כלים מעשיים לחוקרות וחוקרי משתמשים, מעצבות ומעצבי UX ומנהלות ומנהלי צוותים לשימוש אתי
             ואחראי בכלי AI בכל שלבי המחקר. המדריך מדגיש את החשיבות של שמירה על המצפן האתי תוך כדי ניצול היתרונות שמציעה
             הטכנולוגיה.
