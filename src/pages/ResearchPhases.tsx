@@ -45,9 +45,9 @@ const ResearchPhases = () => {
   return (
     <div className="container mx-auto px-4 py-8 max-w-5xl">
 
-      <header className="mb-10">
-        <h1 className="text-4xl font-bold mb-4 text-foreground">יישום מעשי בארבעת שלבי המחקר</h1>
-        <p className="text-xl text-muted-foreground leading-relaxed">
+      <header className="mb-10 text-center">
+        <h1 className="text-5xl font-bold mb-4 text-foreground">יישום מעשי בארבעת שלבי המחקר</h1>
+        <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
           תחום מחקר המשתמשים (UXR) מורכב ממחזוריות מובנית הכוללת את השלבים העיקריים של תכנון המחקר, 
           איסוף נתונים, ניתוח והצגת ממצאים והמלצות.
         </p>
