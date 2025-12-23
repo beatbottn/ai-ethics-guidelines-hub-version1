@@ -1,43 +1,35 @@
 import { Link } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Target, Database, BarChart3, Presentation } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { Phase1Icon, Phase2Icon, Phase3Icon, Phase4Icon } from "@/components/icons/NavIcons";
 
 const phases = [
   {
     number: 1,
     title: "תכנון והגדרת מטרות",
     description: "שלב ההכנה הראשוני הכולל הגדרת מטרות המחקר, זיהוי קהל היעד ובחירת שיטות מחקר מתאימות.",
-    icon: Target,
+    icon: Phase1Icon,
     url: "/phases/planning",
-    color: "from-blue-500/20 to-blue-600/20",
-    borderColor: "border-blue-500/30",
   },
   {
     number: 2,
     title: "איסוף נתונים",
     description: "ביצוע המחקר בפועל - ראיונות, סקרים, תצפיות ושיטות נוספות לאיסוף מידע מקהל היעד.",
-    icon: Database,
+    icon: Phase2Icon,
     url: "/phases/data-collection",
-    color: "from-green-500/20 to-green-600/20",
-    borderColor: "border-green-500/30",
   },
   {
     number: 3,
     title: "ניתוח נתונים",
     description: "עיבוד וניתוח המידע שנאסף, זיהוי דפוסים ותובנות, והפקת מסקנות מבוססות נתונים.",
-    icon: BarChart3,
+    icon: Phase3Icon,
     url: "/phases/analysis",
-    color: "from-purple-500/20 to-purple-600/20",
-    borderColor: "border-purple-500/30",
   },
   {
     number: 4,
     title: "הצגת ממצאים",
     description: "הכנת דוחות וסיכומים, הצגת התובנות לבעלי העניין והמלצות לפעולה.",
-    icon: Presentation,
+    icon: Phase4Icon,
     url: "/phases/presentation",
-    color: "from-orange-500/20 to-orange-600/20",
-    borderColor: "border-orange-500/30",
   },
 ];
 
@@ -71,27 +63,25 @@ const ResearchPhases = () => {
 
       <div className="grid gap-6 md:grid-cols-2">
         {phases.map((phase) => (
-          <Link key={phase.number} to={phase.url} className="block group">
-            <Card className={`h-full transition-all duration-300 hover:shadow-lg hover:scale-[1.02] bg-gradient-to-br ${phase.color} ${phase.borderColor} border-2`}>
-              <CardHeader>
-                <div className="flex items-center gap-4">
-                  <div className={`flex items-center justify-center w-12 h-12 rounded-full bg-background/80 ${phase.borderColor} border-2`}>
-                    <span className="text-xl font-bold text-foreground">{phase.number}</span>
-                  </div>
-                  <div className="flex-1">
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      {phase.title}
-                    </CardTitle>
-                  </div>
-                  <phase.icon className="h-8 w-8 text-muted-foreground group-hover:text-primary transition-colors" />
+          <Link key={phase.number} to={phase.url} className="group">
+            <div className="bg-white border border-[#818df8] rounded-lg p-6 h-full flex flex-col">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="p-3 rounded-lg bg-[#D6FFFF] text-[#3f4555] flex items-center justify-center">
+                  <phase.icon className="h-6 w-6" />
                 </div>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-base leading-relaxed">
-                  {phase.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+                <div className="flex items-center gap-2">
+                  <span className="text-xl font-bold text-foreground">{phase.number}.</span>
+                  <h3 className="text-xl font-semibold">{phase.title}</h3>
+                </div>
+              </div>
+              <p className="text-muted-foreground leading-relaxed flex-grow">
+                {phase.description}
+              </p>
+              <div className="mt-4 flex items-center text-primary font-medium group-hover:gap-2 transition-all">
+                <span>קראו עוד</span>
+                <ArrowLeft className="h-4 w-4" />
+              </div>
+            </div>
           </Link>
         ))}
       </div>
