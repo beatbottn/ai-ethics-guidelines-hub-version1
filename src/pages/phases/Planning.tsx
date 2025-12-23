@@ -82,7 +82,7 @@ const Planning = () => {
                     <div>
                       <h3 className="text-lg font-bold text-foreground mb-4">כיצד לפעול</h3>
                       <ul className="space-y-4">
-                        {task.howToAct.map((action, index) => <li key={index} className="text-foreground/90 leading-relaxed pr-6 relative before:content-['•'] before:absolute before:right-0 before:text-primary before:font-bold">
+                        {task.howToAct.map((action, index) => <li key={index} className="text-lg text-foreground/90 leading-relaxed pr-6 relative before:content-['•'] before:absolute before:right-0 before:text-primary before:font-bold">
                             {action}
                           </li>)}
                       </ul>
