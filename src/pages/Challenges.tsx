@@ -71,7 +71,7 @@ const Challenges = () => {
         {/* Header */}
         <div className="space-y-4 text-center">
           <h1 className="font-bold text-foreground text-4xl">אתגרי AI: מה חשוב להכיר כאשר טעויות גורמות לנזק אמיתי</h1>
-          <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto text-lg">
+          <p className="text-muted-foreground leading-relaxed max-w-4xl mx-auto text-base">
             כלי AI מציעים יתרונות רבים למחקר משתמשים, אבל הם גם מסתירים סיכונים אמיתיים. כאשר AI טועה במחקר, ההשלכות
             לא נשארות על הנייר - הן יכולות להוביל להחלטות עיצוב שפוגעות בבריאות אנשים, מפספסות קבוצות פגיעות, או
             מעמיקות אי-שוויון חברתי. להלן חמישה סיכונים מרכזיים שחשוב להכיר- כי ההשפעה שלהם על המשתמשים שלנו היא
