@@ -13,6 +13,7 @@ const principles = [
       "כיבוד חירות ובחירת האדם: זכותו של אדם לקבל החלטות מתוך רצון חופשי, באופן עצמאי. עיקרון זה מחייב לכבד את הסכמה מדעת של אדם, המתבטא במחקר, בהשלכות. זהו עיקרון המצריך מידע מלא ובהבנה מלאה על ההשלכות.",
     cardStyle: "border border-[#788EFF] border-r-4 border-r-[#4EC9EF] bg-[rgba(120,141,255,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
     iconBgStyle: "bg-[rgba(120,141,255,0.12)]",
+    iconColor: "text-[#788EFF]",
   },
   {
     id: "nonmaleficence",
@@ -23,6 +24,7 @@ const principles = [
       'זהו הכלל הבסיסי "קודם כל, אל תזיק" - להימנע מפגיעה או נזק, בין אם מכוון ובין אם בלתי מכוון. המשמעות במחקר היא לנקוט זהירות באמצעות חשיבה ביקורתית. יש להגן על משתתפי המחקר מפני נזק כלכלי, חברתי, פסיכולוגי או פיזי, ולמנוע שימוש לרעה או שגוי בנתונים, בפרטיות, או פגיעה במידע.',
     cardStyle: "border border-[#4EC9EF] bg-[rgba(78,201,239,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
     iconBgStyle: "bg-[rgba(78,201,239,0.12)]",
+    iconColor: "", // Icon has hardcoded colors
   },
   {
     id: "beneficence",
@@ -33,6 +35,7 @@ const principles = [
       "עיקרון זה מחייב אותנו לפעול למען הרווחה, הבטיחות והאינטרסים המיטביים של האדם. המשמעות במחקר היא לוודא שיש תועלת פוטנציאלית מהמחקר, ושכלל הסיכונים ממוזער, כך שהתועלת עולה באופן ברור על הסיכונים למשתתפים ולחברה.",
     cardStyle: "border border-[#05D9DA] bg-[rgba(5,217,218,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
     iconBgStyle: "bg-[rgba(5,217,218,0.12)]",
+    iconColor: "text-[#05D9DA]",
   },
   {
     id: "justice",
@@ -43,6 +46,7 @@ const principles = [
       "עיקרון הצדק עוסק בהגינות, שוויון וחלוקה הוגנת של משאבים, הטבות ונטלים. בהקשר המחקר, זה אומר: הוגנות בבחירת משתתפים - לוודא שאין ניצול של קבוצות פגיעות או אפליה בלתי הוגנת; חלוקה הוגנת של תועלת - לוודא שהתועלת מהמחקר תגיע בצורה הוגנת גם לאוכלוסיות שנחקרו; שקיפות ואחריות - הקפדה על תהליך הוגן ושקוף.",
     cardStyle: "border border-[#CD56CC] bg-[rgba(205,86,204,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
     iconBgStyle: "bg-[rgba(208,86,207,0.12)]",
+    iconColor: "text-[#CD56CC]",
   },
 ];
 const Principles = () => {
@@ -69,7 +73,7 @@ const Principles = () => {
                 className={`rounded-lg p-8 space-y-4 transition-all duration-300 ${principle.cardStyle}`}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`p-4 rounded-lg ${principle.iconBgStyle}`}>
+                  <div className={`p-4 rounded-lg ${principle.iconBgStyle} ${principle.iconColor}`}>
                     <Icon className="h-12 w-12" />
                   </div>
                   <div className="flex-1">
