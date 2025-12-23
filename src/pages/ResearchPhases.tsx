@@ -39,7 +39,7 @@ const ResearchPhases = () => {
 
       <section className="mb-10">
         <div className="card-elevated p-8">
-          <p className="text-foreground/90 leading-relaxed text-lg">
+          <p className="text-foreground/90 leading-relaxed text-base">
             בינה מלאכותית משחררת חוקרות.ים ממשימות חוזרות כדי להתמקד בחשיבה אנושית. 
             אך השילוב האפקטיבי דורש חשיבה אסטרטגית וביקורתית, שיפוט אנושי ואחריות מלאה על התוצאות.
           </p>
