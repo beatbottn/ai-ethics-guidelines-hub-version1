@@ -2,13 +2,7 @@ import { useState } from "react";
 import { Linkedin, BookOpen, Calendar, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { useSEO } from "@/hooks/useSEO";
-
 const About = () => {
-  useSEO({
-    title: "אודות המדריך | AI UXR Ethics Guidelines",
-    description: "מידע על יוצרות המדריך, מתודולוגיה ומקורות המחקר. מדריך אתי לשימוש ב-AI במחקר משתמשים."
-  });
   const [isMethodologyOpen, setIsMethodologyOpen] = useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
@@ -299,10 +293,10 @@ const About = () => {
               <h3 className="text-2xl font-semibold text-foreground">נעמה שפירא</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 אשת חווית משתמש עם ניסיון של מעל ל-20 שנה במחקר, אפיון וגיבוש אסטרטגיה למוצרים מורכבים בסביבות עתירות
-                טכנולוגיה מתקדמת (למשל ב- Intel, Dropbox ו-Microsoft). הגישה של נעמה ל-UX נשענת על תואר שני בפסיכולוגיה
-                של האינטרנט, ניסיון רחב בעיצוב ומחקר, והבנה מעמיקה של אסטרטגיה עסקית. היא מתמחה ביישום פרקטי של תובנות
+                טכנולוגיה (למשל ב- Intel, Dropbox ו-Microsoft). הגישה של נעמה ל-UX נשענת על תואר שני בפסיכולוגיה של
+                האינטרנט, ניסיון רחב בעיצוב ומחקר, והבנה מעמיקה של אסטרטגיה עסקית. היא מתמחה ביישום פרקטי של תובנות
                 מחקר, שעוזרות להתוות את הדרך לעיצוב, טקטיקה ואסטרטגיה במוצרים חדשניים. כשהיא לא עושה UX, נעמה מתנדבת
-                במיזמים שמשפרים את העולם באמצעות טכנולוגיה מתקדמת..
+                במיזמים שמשפרים את העולם באמצעות טכנולוגיה.
               </p>
               <Button variant="outline" className="gap-2" asChild>
                 <a href="https://www.linkedin.com/in/nshapi/" target="_blank" rel="noopener noreferrer">
