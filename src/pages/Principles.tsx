@@ -11,7 +11,7 @@ const principles = [
     titleEn: "Autonomy",
     definition:
       "כיבוד חירות ובחירת האדם: זכותו של אדם לקבל החלטות מתוך רצון חופשי, באופן עצמאי. עיקרון זה מחייב לכבד את הסכמה מדעת של אדם, המתבטא במחקר, בהשלכות. זהו עיקרון המצריך מידע מלא ובהבנה מלאה על ההשלכות.",
-    cardStyle: "border border-[#788EFF] border-r-4 border-r-[#4EC9EF] bg-[rgba(120,141,255,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
+    cardStyle: "border border-[#788EFF] bg-[rgba(120,141,255,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
     iconBgStyle: "bg-[rgba(120,141,255,0.12)]",
     iconColor: "text-[#788EFF]",
   },
