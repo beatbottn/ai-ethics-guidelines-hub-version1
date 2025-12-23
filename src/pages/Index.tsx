@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { BookOpen, AlertTriangle, ClipboardList, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
+import { CompassIcon, DangerTriangleIcon, ChecklistIcon } from "@/components/icons/NavIcons";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
       {/* Hero Section */}
@@ -47,7 +48,7 @@ const Index = () => {
             <div className="bg-white border border-[#818df8] rounded-lg p-6 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 rounded-lg bg-[#D6FFFF] text-[#3f4555]">
-                  <BookOpen className="h-6 w-6" />
+                  <CompassIcon className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold">על מה חשוב שנשמור?</h3>
               </div>
@@ -66,7 +67,7 @@ const Index = () => {
             <div className="bg-white border border-[#818df8] rounded-lg p-6 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 rounded-lg bg-[#D6FFFF] text-[#3f4555]">
-                  <AlertTriangle className="h-6 w-6" />
+                  <DangerTriangleIcon className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold">אתגרי AI</h3>
               </div>
@@ -85,7 +86,7 @@ const Index = () => {
             <div className="bg-white border border-[#818df8] rounded-lg p-6 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 rounded-lg bg-[#D6FFFF] text-[#3f4555]">
-                  <ClipboardList className="ml-2 h-6 w-6" />
+                  <ChecklistIcon className="h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold">המדריך לפי שלבים</h3>
               </div>
