@@ -69,7 +69,7 @@ const ResearchPhases = () => {
           </Link>)}
       </div>
 
-      <section className="mt-12 p-6 bg-muted/50 rounded-lg border">
+      <section className="mt-12 p-6 rounded-lg border bg-accent">
         <h2 className="text-xl font-semibold mb-3 text-foreground">💡 טיפ חשוב</h2>
         <p className="text-muted-foreground leading-relaxed">
           בכל שלב במחקר, זכרו שה-AI הוא כלי עזר ולא תחליף לחשיבה ביקורתית ושיקול דעת מקצועי. 
