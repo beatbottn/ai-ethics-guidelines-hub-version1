@@ -118,7 +118,7 @@ const Principles = () => {
                 className="w-full gap-2"
               >
                 <Download className="h-5 w-5" />
-                הורידו את התמונה ברזולוציה מלאה
+                הורידו את המודל להדפסה
               </Button>
             </div>
           </div>
