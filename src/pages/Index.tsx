@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { BookOpen, AlertTriangle, ClipboardList, ArrowLeft } from "lucide-react";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
+  return <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
       {/* Hero Section */}
       <section className="pt-10 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="text-center space-y-6">
@@ -87,7 +85,7 @@ const Index = () => {
             <div className="bg-white border border-[#818df8] rounded-lg p-6 h-full flex flex-col">
               <div className="flex items-center gap-4 mb-4">
                 <div className="p-3 rounded-lg bg-[#D6FFFF] text-[#3f4555]">
-                  <ClipboardList className="h-6 w-6" />
+                  <ClipboardList className="ml-2 h-6 w-6" />
                 </div>
                 <h3 className="text-xl font-semibold">המדריך לפי שלבים</h3>
               </div>
@@ -102,8 +100,6 @@ const Index = () => {
           </Link>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
