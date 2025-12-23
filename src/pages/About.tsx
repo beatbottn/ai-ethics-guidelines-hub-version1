@@ -240,8 +240,7 @@ const About = () => {
           </div>
 
           {/* Course Link */}
-          <div className="flex items-center gap-3 text-muted-foreground">
-            <BookOpen className="h-5 w-5" />
+          <div className="text-muted-foreground">
             <a 
               href="https://cont-edu.technion.ac.il/programs/%D7%9E%D7%97%D7%A9%D7%91%D7%99%D7%9D-%D7%95%D7%94%D7%99%D7%99%D7%98%D7%A7/%D7%9E%D7%97%D7%A7%D7%A8-%D7%97%D7%95%D7%95%D7%99%D7%AA-%D7%9E%D7%A9%D7%AA%D7%9E%D7%A9-%D7%91%D7%A2%D7%99%D7%93%D7%9F-%D7%94-ai/" 
               target="_blank" 
