@@ -11,8 +11,9 @@ const principles = [
     titleEn: "Autonomy",
     definition:
       "כיבוד חירות ובחירת האדם: זכותו של אדם לקבל החלטות מתוך רצון חופשי, באופן עצמאי. עיקרון זה מחייב לכבד את הסכמה מדעת של אדם, המתבטא במחקר, בהשלכות. זהו עיקרון המצריך מידע מלא ובהבנה מלאה על ההשלכות.",
-    cardStyle: "border border-[#788EFF] border-r-4 border-r-[#4EC9EF] bg-[rgba(120,141,255,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
-    iconBgStyle: "bg-[rgba(120,141,255,0.12)]",
+    color: "from-blue-500 to-blue-600",
+    bgColor: "bg-blue-50 dark:bg-blue-950/20",
+    borderColor: "border-blue-200 dark:border-blue-800",
     iconColor: "text-[#788EFF]",
   },
   {
@@ -22,9 +23,10 @@ const principles = [
     titleEn: "Non-Maleficence",
     definition:
       'זהו הכלל הבסיסי "קודם כל, אל תזיק" - להימנע מפגיעה או נזק, בין אם מכוון ובין אם בלתי מכוון. המשמעות במחקר היא לנקוט זהירות באמצעות חשיבה ביקורתית. יש להגן על משתתפי המחקר מפני נזק כלכלי, חברתי, פסיכולוגי או פיזי, ולמנוע שימוש לרעה או שגוי בנתונים, בפרטיות, או פגיעה במידע.',
-    cardStyle: "border border-[#4EC9EF] bg-[rgba(78,201,239,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
-    iconBgStyle: "bg-[rgba(78,201,239,0.12)]",
-    iconColor: "", // Icon has hardcoded colors
+    color: "from-green-500 to-green-600",
+    bgColor: "bg-green-50 dark:bg-green-950/20",
+    borderColor: "border-green-200 dark:border-green-800",
+    iconColor: "text-[#4EC9EF]",
   },
   {
     id: "beneficence",
@@ -33,8 +35,9 @@ const principles = [
     titleEn: "Beneficence",
     definition:
       "עיקרון זה מחייב אותנו לפעול למען הרווחה, הבטיחות והאינטרסים המיטביים של האדם. המשמעות במחקר היא לוודא שיש תועלת פוטנציאלית מהמחקר, ושכלל הסיכונים ממוזער, כך שהתועלת עולה באופן ברור על הסיכונים למשתתפים ולחברה.",
-    cardStyle: "border border-[#05D9DA] bg-[rgba(5,217,218,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
-    iconBgStyle: "bg-[rgba(5,217,218,0.12)]",
+    color: "from-pink-500 to-pink-600",
+    bgColor: "bg-pink-50 dark:bg-pink-950/20",
+    borderColor: "border-pink-200 dark:border-pink-800",
     iconColor: "text-[#05D9DA]",
   },
   {
@@ -44,9 +47,10 @@ const principles = [
     titleEn: "Fairness & Justice",
     definition:
       "עיקרון הצדק עוסק בהגינות, שוויון וחלוקה הוגנת של משאבים, הטבות ונטלים. בהקשר המחקר, זה אומר: הוגנות בבחירת משתתפים - לוודא שאין ניצול של קבוצות פגיעות או אפליה בלתי הוגנת; חלוקה הוגנת של תועלת - לוודא שהתועלת מהמחקר תגיע בצורה הוגנת גם לאוכלוסיות שנחקרו; שקיפות ואחריות - הקפדה על תהליך הוגן ושקוף.",
-    cardStyle: "border border-[#CD56CC] bg-[rgba(205,86,204,0.06)] shadow-[0_1px_3px_0_rgba(0,0,0,0.10)]",
-    iconBgStyle: "bg-[rgba(208,86,207,0.12)]",
-    iconColor: "text-[#CD56CC]",
+    color: "from-purple-500 to-purple-600",
+    bgColor: "bg-purple-50 dark:bg-purple-950/20",
+    borderColor: "border-purple-200 dark:border-purple-800",
+    iconColor: "text-[#D056CF]",
   },
 ];
 const Principles = () => {
@@ -70,10 +74,10 @@ const Principles = () => {
             return (
               <div
                 key={principle.id}
-                className={`rounded-lg p-8 space-y-4 transition-all duration-300 ${principle.cardStyle}`}
+                className={`card-elevated ${principle.bgColor} p-8 space-y-4 hover:shadow-[var(--shadow-strong)] transition-all duration-300`}
               >
                 <div className="flex items-start gap-4">
-                  <div className={`p-4 rounded-lg ${principle.iconBgStyle} ${principle.iconColor}`}>
+                  <div className={`p-4 rounded-lg bg-white/80 dark:bg-black/20 ${principle.iconColor}`}>
                     <Icon className="h-12 w-12" />
                   </div>
                   <div className="flex-1">
@@ -90,7 +94,7 @@ const Principles = () => {
         {/* Two Side-by-Side Containers */}
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
           {/* Right Container - Poster */}
-          <div className="bg-white border border-[#818df8] rounded-lg p-6 flex flex-col h-full">
+          <div className="card-elevated p-8 bg-primary/5 flex flex-col h-full">
             <div className="flex-1 space-y-4">
               <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
               <div className="flex gap-6 items-start">
@@ -118,13 +122,13 @@ const Principles = () => {
                 className="w-full gap-2"
               >
                 <Download className="h-5 w-5" />
-                הורידו את התמונה ברזולוציה מלאה
+                הורידו את המודל להדפסה
               </Button>
             </div>
           </div>
 
           {/* Left Container - CTA */}
-          <div className="bg-white border border-[#818df8] rounded-lg p-6 flex flex-col h-full">
+          <div className="card-elevated p-8 bg-primary/5 flex flex-col h-full">
             <div className="flex-1 space-y-4">
               <h2 className="text-2xl font-bold text-foreground">מעקרונות ליישום</h2>
               <p className="text-foreground/90 leading-relaxed text-lg">
