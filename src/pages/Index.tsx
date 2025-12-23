@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { CompassIcon, DangerTriangleIcon, ChecklistIcon } from "@/components/icons/NavIcons";
+import { useSEO } from "@/hooks/useSEO";
+
 const Index = () => {
+  useSEO({
+    title: "מדריך AI אתי במחקר UX | AI UXR Ethics",
+    description: "מדריך מעשי לשימוש אתי בבינה מלאכותית במחקר משתמשים. כלים והמלצות לחוקרי UX בכל שלבי המחקר."
+  });
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
       {/* Hero Section */}

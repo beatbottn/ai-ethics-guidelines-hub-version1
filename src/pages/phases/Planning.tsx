@@ -1,6 +1,12 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
+import { useSEO } from "@/hooks/useSEO";
+
 const Planning = () => {
+  useSEO({
+    title: "תכנון מחקר | AI UXR Ethics Guidelines",
+    description: "המלצות אתיות לשלב תכנון מחקר משתמשים עם AI. הגדרת מטרות, קהל יעד ושאלות מחקר בצורה אחראית."
+  });
   const tasks = [{
     id: "exploratory-research",
     title: "מחקר מקדים וגילוי",

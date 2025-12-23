@@ -1,4 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useSEO } from "@/hooks/useSEO";
+
 const challenges = [{
   id: "bias",
   title: "הטיה אלגוריתמית",
@@ -66,6 +68,11 @@ const challenges = [{
   uxContext: "כאשר חוקרים מסתמכים על AI למשימות הדורשות פרספקטיבה, חשיבה וביקורת אנושית - הם עלולים לאבד את האינטואיציה המחקרית. הסתמכות יתר עלולה להוביל ליצירת תובנות גנריות, להחמיץ חוויות ייחודיות, ולפגוע ביכולת לזהות סתירות או דפוסים חריגים שדורשים חשיבה מקורית."
 }];
 const Challenges = () => {
+  useSEO({
+    title: "אתגרי AI במחקר | AI UXR Ethics Guidelines",
+    description: "הכירו את הסיכונים בשימוש ב-AI במחקר משתמשים: הטיות, הזיות, Black Box ואבטחה. דוגמאות מהעולם האמיתי."
+  });
+
   return <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { AutonomyIcon, NonMaleficenceIcon, BeneficenceIcon, JusticeIcon } from "@/components/icons/NavIcons";
 import ethicsPoster from "@/assets/ethics-poster.jpeg";
+import { useSEO } from "@/hooks/useSEO";
 const principles = [
   {
     id: "autonomy",
@@ -50,6 +51,11 @@ const principles = [
   },
 ];
 const Principles = () => {
+  useSEO({
+    title: "עקרונות אתיים | AI UXR Ethics Guidelines",
+    description: "ארבעת העקרונות האתיים למחקר UX עם AI: אוטונומיה, אי-גרימת נזק, תרומה לרווחה והוגנות וצדק."
+  });
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted py-12 px-6 md:px-12" dir="rtl" lang="he">
       <div className="max-w-6xl mx-auto space-y-12">

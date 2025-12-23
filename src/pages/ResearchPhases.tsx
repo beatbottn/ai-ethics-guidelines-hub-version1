@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Phase1Icon, Phase2Icon, Phase3Icon, Phase4Icon } from "@/components/icons/NavIcons";
+import { useSEO } from "@/hooks/useSEO";
 const phases = [{
   number: 1,
   title: "תכנון והגדרת מטרות",
@@ -27,6 +28,11 @@ const phases = [{
   url: "/phases/presentation"
 }];
 const ResearchPhases = () => {
+  useSEO({
+    title: "שלבי המחקר | AI UXR Ethics Guidelines",
+    description: "מדריך מעשי לשימוש אתי ב-AI בארבעת שלבי מחקר המשתמשים: תכנון, איסוף, ניתוח והצגת ממצאים."
+  });
+
   return <div className="container mx-auto px-4 py-8 max-w-5xl">
 
       <header className="mb-10 text-center">
