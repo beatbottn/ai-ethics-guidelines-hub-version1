@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { CompassIcon, DangerTriangleIcon, ChecklistIcon } from "@/components/icons/NavIcons";
 const Index = () => {
-  return <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted" dir="rtl" lang="he">
       {/* Hero Section */}
       <section className="pt-10 px-6 md:px-12 max-w-6xl mx-auto">
         <div className="text-center space-y-6">
@@ -14,7 +15,7 @@ const Index = () => {
           </p>
           <div className="pt-4 text-sm text-muted-foreground">
             נכתב על ידי: <span className="font-semibold">סיונה שרלג</span> בשיתוף עם{" "}
-            <span className="font-semibold">נעמה שפירא</span> | ספטמבר 2025
+            <span className="font-semibold">נעמה שפירא</span> | דצמבר 2025
           </div>
         </div>
       </section>
@@ -101,6 +102,7 @@ const Index = () => {
           </Link>
         </div>
       </section>
-    </div>;
+    </div>
+  );
 };
 export default Index;
