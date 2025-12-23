@@ -14,8 +14,15 @@ const Index = () => {
             מדריך ידע מעשי עם כלים והמלצות למשימות מחקריות - לכל מי שעוסקות ועוסקים בחווית משתמשים
           </p>
           <div className="pt-4 text-sm text-muted-foreground">
-            נכתב על ידי: <span className="font-semibold">סיונה שרלג</span> בשיתוף עם{" "}
-            <span className="font-semibold">נעמה שפירא</span> | דצמבר 2025
+            נכתב על ידי:{" "}
+            <a href="https://www.linkedin.com/in/sivana/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">
+              סיונה שרלג
+            </a>{" "}
+            בשיתוף עם{" "}
+            <a href="https://www.linkedin.com/in/nshapi/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:underline">
+              נעמה שפירא
+            </a>{" "}
+            | דצמבר 2025
           </div>
         </div>
       </section>
