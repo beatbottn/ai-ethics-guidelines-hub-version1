@@ -90,7 +90,7 @@ const Principles = () => {
         {/* Two Side-by-Side Containers */}
         <div className="grid md:grid-cols-2 gap-8 items-stretch">
           {/* Right Container - Poster */}
-          <div className="card-elevated p-8 bg-primary/5 flex flex-col h-full">
+          <div className="bg-white border border-[#818df8] rounded-lg p-6 flex flex-col h-full">
             <div className="flex-1 space-y-4">
               <h2 className="text-2xl font-bold text-foreground">שמרו על המצפן המוסרי תמיד במודעות</h2>
               <div className="flex gap-6 items-start">
@@ -124,7 +124,7 @@ const Principles = () => {
           </div>
 
           {/* Left Container - CTA */}
-          <div className="card-elevated p-8 bg-primary/5 flex flex-col h-full">
+          <div className="bg-white border border-[#818df8] rounded-lg p-6 flex flex-col h-full">
             <div className="flex-1 space-y-4">
               <h2 className="text-2xl font-bold text-foreground">מעקרונות ליישום</h2>
               <p className="text-foreground/90 leading-relaxed text-lg">
