@@ -83,7 +83,7 @@ const Presentation = () => {
                       <h3 className="text-lg font-bold text-foreground mb-3">עקרונות אתיים מהותיים</h3>
                       <div className="flex flex-wrap gap-2">
                         {task.principles.split(", ").map((principle, idx) => (
-                          <Badge key={idx} variant="secondary" className="text-sm px-3 py-1">
+                          <Badge key={idx} variant="accent" className="text-sm px-3 py-1">
                             {principle}
                           </Badge>
                         ))}
