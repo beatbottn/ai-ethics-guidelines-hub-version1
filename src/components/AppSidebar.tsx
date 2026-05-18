@@ -79,7 +79,11 @@ export function AppSidebar() {
                         </SidebarMenuButton>
                         {!isCollapsed && (
                           <CollapsibleTrigger asChild>
-                            <button className="p-2 hover:bg-sidebar-accent/50 rounded-md">
+                            <button
+                              type="button"
+                              aria-label={`הצג/הסתר תת-תפריט עבור ${item.title}`}
+                              className="p-2 hover:bg-sidebar-accent/50 rounded-md"
+                            >
                               <ChevronDownIcon className="h-4 w-4 transition-transform group-data-[state=open]/collapsible:rotate-180" />
                             </button>
                           </CollapsibleTrigger>
