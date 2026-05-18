@@ -61,7 +61,7 @@ const ResearchPhases = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-xl font-bold text-foreground">{phase.number}.</span>
-                  <h3 className="text-xl font-semibold">{phase.title}</h3>
+                  <h2 className="text-xl font-semibold">{phase.title}</h2>
                 </div>
               </div>
               <p className="text-muted-foreground leading-relaxed flex-grow">
