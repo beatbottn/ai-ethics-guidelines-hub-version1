@@ -1,53 +1,29 @@
-## Context
+## What's wrong
 
-Your site is published on the custom domain **aiethicsuxr.org**. The SEO scanner doesn't know that and keeps flagging the sitemap/robots/canonical for pointing to aiethicsuxr.org instead of the Lovable preview URL. Those findings are **false positives** — your setup is correct. I'll mark them resolved (no code change) once you approve.
+The GitHub Actions deploy is failing for two reasons:
 
-Below is what actually needs attention, ranked. Nothing here requires uploading assets or replacing anything on the domain unless flagged "critical".
+1. **Node version mismatch** — the workflow uses Node 18, but `@supabase/supabase-js@2.106.0` (and friends) require Node ≥ 20.
+2. **Lockfile out of sync** — `package.json` lists newer Supabase packages (2.106.0, plus `iceberg-js`, updated `tslib`) that aren't in `package-lock.json`, so `npm ci` refuses to install.
 
----
+Lovable bumped the Supabase SDK in the repo, but the lockfile and the CI Node version never caught up. Until this is fixed, **no Lovable change will ever reach aiethicsuxr.org** — every push will fail at the install step.
 
-## 🔴 Critical (do these)
+## Fix (2 small changes)
 
-**1. Google Search Console verification + sitemap submission**
-The verification meta tag is already in `index.html`. Once you confirm the latest version is published on aiethicsuxr.org, I run the verification + submit `https://aiethicsuxr.org/sitemap.xml`. No file changes, no uploads — just two API calls. This is the highest-value SEO action available.
+### 1. Update `.github/workflows/deploy.yml`
+Change `node-version: '18'` → `node-version: '20'`.
 
-**2. Unique meta description for `/about`**
-About page currently inherits the homepage description. One-line fix: add `useSEO({...})` to `src/pages/About.tsx`. Pure code, no asset/domain changes.
+### 2. Regenerate `package-lock.json`
+Run `npm install` locally (or I can do it here in the sandbox) to sync the lockfile with the new Supabase versions, then commit the updated `package-lock.json`.
 
----
+## Order of operations
 
-## 🟡 Worth doing (low effort, real SEO value)
+1. I update the workflow file (Node 20).
+2. I run `npm install` in the sandbox to regenerate `package-lock.json`.
+3. You publish in Lovable → both files land on GitHub `main` → Actions re-runs → site deploys successfully.
+4. We verify `aiethicsuxr.org` shows today's `last-modified` and `/llms.txt` returns 200.
+5. I retry Google Search Console verification + sitemap submission.
 
-**3. Per-route canonical + og:url**
-Every page currently advertises `https://aiethicsuxr.org/` as its canonical URL. Search engines may collapse all your pages into one. Fix by extending the `useSEO` hook to also set `<link rel="canonical">` and `og:url` based on the current route. Pure code.
+## Notes
 
-**4. Heading hierarchy on `/phases`**
-`ResearchPhases.tsx` jumps from `<h1>` to `<h3>` inside the phase cards. Change those `<h3>` to `<h2>`. Trivial, no visual change.
-
-**5. Accessible labels for sidebar toggle buttons**
-`AppSidebar.tsx` collapse/expand triggers have no accessible name. Add `aria-label`. Trivial.
-
-**6. Structured data (JSON-LD)**
-Add an `Organization` + `WebSite` JSON-LD block inline in `index.html`, and `Article` schema per content page via the SEO hook. Helps Google show richer results. Pure code, no assets.
-
-**7. `/llms.txt`**
-Small static markdown file at `public/llms.txt` describing the site for AI crawlers (ChatGPT, Perplexity, Claude). New file in the repo only — not an "upload to the domain", it ships with the next publish.
-
----
-
-## ⚪ Skip for now (matches your constraint)
-
-**8. Custom og:image (social preview)**
-Currently uses the default Lovable placeholder. Fixing this means generating a branded image and shipping it as an asset. You said no uploads/replacements unless critical — social previews are nice-to-have, not critical, so I'd skip until you want it.
-
----
-
-## ✅ False positives I'll mark resolved (no code change)
-
-- "Sitemap/robots point to aiethicsuxr.org not the lovable.app preview" → aiethicsuxr.org **is** your production domain. Scanner is wrong.
-
----
-
-## Suggested next step
-
-Approve this plan, and on implementation I'll do items **1–7** in one pass (skipping #8). All changes are code-only, nothing gets uploaded to or replaced on aiethicsuxr.org beyond the next normal publish.
+- Nothing about this touches GoDaddy, DNS, or the GitHub Pages setup itself — just the build config.
+- This is the root cause of why your earlier "GitHub looks up to date" check showed commits landing but the live site never updated: the commits arrived, but every deploy job has been red.
